@@ -24,7 +24,7 @@ public class PathsWithoutCrossing implements Algorithm {
     private int calculateCountWays(final int numberOfPoints) {
         int[] arr = new int[numberOfPoints + 1];
         arr[0] = 1;
-        arr[0] = arr[1];
+        arr[1] = 1;
         for (int i = 2; i <= numberOfPoints; i++) {
             arr[i] = 0;
             for (int j = 0; j < i; j++) {
