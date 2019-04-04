@@ -20,6 +20,8 @@ public class Main {
 
         TASKS.add(new FindMaxSubSequenceLength());
         TASKS.add(new WaysToTileTheFloor());
+        TASKS.add(new CountingSort());
+        TASKS.add(new PathsWithoutCrossing());
 
         boolean onStatus = true;
         int chose = TASKS.size();
