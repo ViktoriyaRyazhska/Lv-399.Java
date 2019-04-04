@@ -1,4 +1,4 @@
-Zapovit
+﻿Zapovit
 
 1.Yak umru, to pohovayte
 2.Мене на могилі
@@ -8,6 +8,7 @@ Zapovit
 6. I Dnipro, I kruchi
 7.Було видно, було чути
 8.Як реве ревучий.
+9.Yak ponese z Ukrainy
 10.У синєє море
 12.I lanu i goru
 14. Do samogo Boga
