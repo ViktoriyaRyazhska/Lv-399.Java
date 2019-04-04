@@ -10,7 +10,7 @@ public class CountingSort implements Algorithm {
     private static int[] numSequence;
 
     /**
-     * @param numSequence
+     * @param numSequence 1
      */
     private void sort(int[] numSequence) {
         int n = numSequence.length;
@@ -29,7 +29,7 @@ public class CountingSort implements Algorithm {
     }
 
     /**
-     * @param bufferedReader
+     * @param bufferedReader 2
      */
     @Override
     public void start(BufferedReader bufferedReader) {
@@ -49,7 +49,7 @@ public class CountingSort implements Algorithm {
     }
 
     /**
-     * @param numSequence
+     * @param numSequence 1
      */
     private void setNumSequence(String numSequence) {
         String[] integerStrings = numSequence.split(" ");
@@ -60,10 +60,10 @@ public class CountingSort implements Algorithm {
     }
 
     /**
-     * @return
+     * @return 1
      */
     @Override
     public String toString() {
-        return "levytskyi.CountingSort";
+        return "CountingSort";
     }
 }
