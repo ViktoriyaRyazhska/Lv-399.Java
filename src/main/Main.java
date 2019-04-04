@@ -1,39 +1,49 @@
 package main;
 
-import chenchak.FriendPairs;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-class Main {
-    private static final List<Algorithm> tasks = new ArrayList<>();
-    private static final BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+public class Main {
+
+    private final static List<Algorithm> TASKS = new ArrayList<>();
+    private final static BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) {
 
-        int chose = 0;
-/*        while (true) {
-            System.out.println("Enter number of task or: \n");
-            for (int i = 0; i < tasks.size(); i++) {
+        TASKS.add(new CountingSort());
+        TASKS.add(new PathsWithoutCrossing());
 
-                System.out.println(i + " " + tasks.get(i));
+        boolean onStatus = true;
+        int chose = TASKS.size();
+
+        while (onStatus) {
+            System.out.println("Enter number of task or: \n");
+            for (int i = 0; i < TASKS.size(); i++) {
+                System.out.println(i + " " + TASKS.get(i));
             }
-            System.out.println(tasks.size() + " Exit");
+            System.out.println(TASKS.size() + " Exit");
+
             try {
                 chose = Integer.parseInt(bufferedReader.readLine());
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (Exception e) {
+                System.out.println("Try to write one more time");
             }
 
-            if (chose == tasks.size()) {
+            if (chose == TASKS.size()) {
                 break;
             }
-            tasks.get(chose).start(bufferedReader);
+            if (chose < TASKS.size()) {
+                TASKS.get(chose).start(bufferedReader);
+
+            }
+            if (chose > TASKS.size()) {
+                System.out.println("Try to write one more time");
+            }
             System.out.println("\n-----------------------------------------------");
-        }*/
+        }
     }
 }
+
