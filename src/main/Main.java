@@ -7,6 +7,8 @@ import hanuliak.FindMaxSubSequenceLength;
 import hanuliak.WaysToTileTheFloor;
 import narepeha.Fibonacci;
 import narepeha.QuickSort;
+import silich.InsertionSorting;
+import silich.WaysToCover;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -26,6 +28,8 @@ public class Main {
         TASKS.add(new PathsWithoutCrossing());
         TASKS.add(new Fibonacci());
         TASKS.add(new QuickSort());
+        TASKS.add(new WaysToCover());
+        TASKS.add(new InsertionSorting());
         boolean onStatus = true;
         int chose = TASKS.size();
 
