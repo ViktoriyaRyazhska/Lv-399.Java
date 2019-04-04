@@ -1,16 +1,12 @@
-﻿Yak umru, to pohovayte
+﻿1.Yak umru, to pohovayte
+2.Мене на могилі
+3.Sered Stepu Shyrokoho
+4.Na Vkraini muliy7.Було видно, було чути
 
-2.Мене на могилі7 Було видно, було чути
-Як реве ревучий.
-3.Sered Stepu Shyrokoho
+8.Як реве ревучий.
+10.У синєє море
+11.Krov Vorozhu... Otoidi Ya
+12.I lanu i goru14.До самого Бога
 
--8
->>>>>>> 52b43d6f84bb19fc6c1f56f899e4fc08a6fdf7d2
-14 До самого Бога
-ya ne znay Boga.
--16
-21 І мене в сем’ї великій,
-
-
-
-
+16.ya ne znay Boga.
+21.І мене в сем’ї великій,
