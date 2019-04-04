@@ -13,15 +13,15 @@ import java.io.IOException;
 public class PaintFence implements Algorithm {
 
     /**
-     * @param mod
+     * @param mod variable - maximum value
      */
     private final int mod = 1000000007;
     /**
-     * @param k
+     * @param k number of colours
      */
     private int k;
     /**
-     * @param n
+     * @param n number of posts
      */
     private int n;
 
@@ -40,20 +40,15 @@ public class PaintFence implements Algorithm {
         } catch (IOException io) {
             io.printStackTrace();
         }
-        // There are k ways to color first post
-        long total = k;
-        // int mod = 1000000007;
-        int same = 0, diff = k;
-        // Fill for 2 posts onwards
-        for (int i = 2; i <= n; i++) {
-            // Current same is same as previous diff
-            same = diff;
 
-            // We always have k-1 choices for next post
+        long total = k;
+        int same = 0, diff = k;
+
+        for (int i = 2; i <= n; i++) {
+
+            same = diff;
             diff = (int) total * (k - 1);
             diff = diff % mod;
-
-            // Total choices till i.
             total = (same + diff) % mod;
         }
         System.out.println(n
