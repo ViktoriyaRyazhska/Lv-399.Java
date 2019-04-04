@@ -5,6 +5,8 @@ import levytskyi.PathsWithoutCrossing;
 
 import hanuliak.FindMaxSubSequenceLength;
 import hanuliak.WaysToTileTheFloor;
+import narepeha.Fibonacci;
+import narepeha.QuickSort;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -22,7 +24,8 @@ public class Main {
         TASKS.add(new WaysToTileTheFloor());
         TASKS.add(new CountingSort());
         TASKS.add(new PathsWithoutCrossing());
-
+        TASKS.add(new Fibonacci());
+        TASKS.add(new QuickSort());
         boolean onStatus = true;
         int chose = TASKS.size();
 
