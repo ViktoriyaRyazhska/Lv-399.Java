@@ -1,13 +1,10 @@
 package main;
 
-import chenchak.FriendPairs;
-
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+
 
 class Main {
     private static final List<Algorithm> tasks = new ArrayList<>();
