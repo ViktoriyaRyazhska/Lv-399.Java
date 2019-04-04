@@ -102,6 +102,6 @@ public class WaysToTileTheFloor implements Algorithm {
 
     @Override
     public String toString() {
-        return "Ways To Tile The Floor{";
+        return "Ways To Tile The Floor";
     }
 }
