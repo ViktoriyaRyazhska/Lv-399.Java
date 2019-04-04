@@ -17,7 +17,6 @@ public class CountingSort implements Algorithm {
      * array of numbers.
      */
     private static int[] numSequence;
-    //todo добавити умову завдання
 
     /**
      * @param newNumSequence is not sorted array.
@@ -48,7 +47,8 @@ public class CountingSort implements Algorithm {
     @Override
     public void start(final BufferedReader bufferedReader) {
         try {
-            System.out.println("Enter array: ");
+            System.out.println("To finish tap the Enter\n"
+                    + "Enter the elements dividing them by spaces: ");
             try {
                 setNumSequence(bufferedReader.readLine());
             } catch (IOException e) {

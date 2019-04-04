@@ -51,7 +51,7 @@ public class PathsWithoutCrossing implements Algorithm {
     @Override
     public void start(final BufferedReader bufferedReader) {
         try {
-            System.out.println("Enter number: ");
+            System.out.println("Enter the even number: ");
             try {
                 number = Integer.parseInt(bufferedReader.readLine());
             } catch (IOException e) {
