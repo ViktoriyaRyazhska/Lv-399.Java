@@ -3,6 +3,9 @@ package main;
 import levytskyi.CountingSort;
 import levytskyi.PathsWithoutCrossing;
 
+import hanuliak.FindMaxSubSequenceLength;
+import hanuliak.WaysToTileTheFloor;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -15,6 +18,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        TASKS.add(new FindMaxSubSequenceLength());
+        TASKS.add(new WaysToTileTheFloor());
         TASKS.add(new CountingSort());
         TASKS.add(new PathsWithoutCrossing());
 
