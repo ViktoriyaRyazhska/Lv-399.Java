@@ -16,6 +16,11 @@ import java.io.IOException;
  */
 public class FriendPairs implements Algorithm {
     /**
+     * This value for minimum value for friend.
+     */
+    public static final int MIN_VALUE_FOR_FRIENDS = 3;
+
+    /**
      * @param n This is count of friend.
      * @return countFriendsPairings.
      */
@@ -45,7 +50,12 @@ public class FriendPairs implements Algorithm {
         int n = 0;
         try {
             n = Integer.parseInt(bufferedReader.readLine());
-            System.out.println(FriendPairs.countFriendsPairings(n));
+            if (n < MIN_VALUE_FOR_FRIENDS) {
+                System.out.println("Must be >2");
+                start(bufferedReader);
+            }
+            System.out.println("Friend count : " + FriendPairs
+                    .countFriendsPairings(n));
         } catch (IOException e) {
             e.printStackTrace();
         }
