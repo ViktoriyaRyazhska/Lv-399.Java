@@ -32,8 +32,7 @@ public class CountingSortTest {
 
     @Test(expected = NumberFormatException.class)
     public void testSetNumSequenceException() {
-        String arrayInString = "1 5 6 f s df";
         CountingSort countingSort = new CountingSort();
-        int [] array = countingSort.setNumSequence(arrayInString);
+        countingSort.setNumSequence("1 5 6 f s df");
     }
 }
