@@ -1,22 +1,22 @@
 package main.java.main;
 
-import javafx.concurrent.Task;
-import levytskyi.CountingSort;
+
 import levytskyi.PathsWithoutCrossing;
 
-import hanuliak.FindMaxSubSequenceLength;
-import hanuliak.WaysToTileTheFloor;
+
 import main.java.chenchak.FriendPairs;
 import main.java.chenchak.InsertingRow;
 import main.java.chenchak.MergeSort;
-import narepeha.Fibonacci;
-import narepeha.LowAndHighEffort;
-import narepeha.QuickSort;
-import silich.InsertionSorting;
-import silich.WaysToCover;
+import main.java.hanuliak.FindMaxSubSequenceLength;
+import main.java.hanuliak.WaysToTileTheFloor;
+import main.java.levytskyi.CountingSort;
+import main.java.narepeha.Fibonacci;
+import main.java.narepeha.LowAndHighEffort;
+import main.java.narepeha.QuickSort;
+import main.java.silich.InsertionSorting;
+import main.java.silich.WaysToCover;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
