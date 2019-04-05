@@ -9,7 +9,6 @@ import java.io.IOException;
  * This class contains methods that return longest palindrome subsequence.
  */
 public class PalindromicSubSequence implements Algorithm {
-
     /**
      * Message for users.
      */
@@ -20,7 +19,8 @@ public class PalindromicSubSequence implements Algorithm {
     private static final String ERROR_MSG = "You must enter string!!!";
 
     /**
-     * @param reader is BufferRider object
+     * Method print to console size of palindrome.
+     * @param reader BufferRider object is the source of input data
      */
     public void start(final BufferedReader reader) {
         System.out.println(ENTER_MSG);
@@ -35,7 +35,8 @@ public class PalindromicSubSequence implements Algorithm {
     }
 
     /**
-     * @param inputString
+     * Method return size of palindrome subsequence.
+     * @param inputString string from user
      * @return size of palindrome
      */
     private int getSizeOfPalindromeSubSequence(final String inputString) {
