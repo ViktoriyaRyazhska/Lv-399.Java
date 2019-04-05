@@ -1,5 +1,0 @@
-/**
- * package hanuliak;
- */
-
-package hanuliak;
