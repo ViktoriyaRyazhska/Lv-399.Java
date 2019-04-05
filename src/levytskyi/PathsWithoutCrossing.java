@@ -7,45 +7,51 @@ import java.io.IOException;
 
 
 /**
- *
+ * This class is count number of ways to connect n (where n is even)
+ * points on a circle such that no two connecting lines cross each
+ * other and every point is connected with one other point.
  */
 public class PathsWithoutCrossing implements Algorithm {
+    /**
+     * @param number is a number of points
+     */
     private static int number;
 
     /**
-     * @param number lol
-     * @return lol
+     * @param numberOfPoints amount of points.
+     * @return amount of ways to do lines without crossing.
      */
-    private int calculateCountWays(int number) {
-        int[] arr = new int[number + 1];
-        arr[0] = arr[1] = 1;
-        for (int i = 2; i <= number; i++) {
+    private int calculateCountWays(final int numberOfPoints) {
+        int[] arr = new int[numberOfPoints + 1];
+        arr[0] = 1;
+        arr[1] = 1;
+        for (int i = 2; i <= numberOfPoints; i++) {
             arr[i] = 0;
             for (int j = 0; j < i; j++) {
                 arr[i] += arr[j] * arr[i - j - 1];
-            }// C4 = C0C3 + C1C2 + C2C1 + C3C0 = 1*5 + 1*2 + 2*1 + 5*1 = 14
+            }
         }
-        return arr[number];
+        return arr[numberOfPoints];
     }
 
     /**
-     * @param number lll
-     * @return
+     * @param amountOfPoints amount of points
+     * @return amount of ways
      */
-    private int countWays(int number) {
-        if ((number < 1) || (number % 2 != 0)) {
+    private int countWays(final int amountOfPoints) {
+        if ((amountOfPoints < 1) || (amountOfPoints % 2 != 0)) {
             return 0;
         }
-        return calculateCountWays(number / 2);
+        return calculateCountWays(amountOfPoints / 2);
     }
 
     /**
-     * @param bufferedReader lol
+     * @param bufferedReader input number of points
      */
     @Override
-    public void start(BufferedReader bufferedReader) {
+    public void start(final BufferedReader bufferedReader) {
         try {
-            System.out.println("Enter number: ");
+            System.out.println("Enter the even number: ");
             try {
                 number = Integer.parseInt(bufferedReader.readLine());
             } catch (IOException e) {
@@ -53,16 +59,17 @@ public class PathsWithoutCrossing implements Algorithm {
             }
             System.out.println("Ways to connect: " + countWays(number));
         } catch (Exception e) {
-            System.out.println("Invalid data type \n Try to write one more time \n");
+            System.out.println("Invalid data type \n "
+                    + "Try to write one more time \n");
             start(bufferedReader);
         }
     }
 
     /**
-     * @return
+     * @return class name
      */
     @Override
-    public String toString(){
+    public String toString() {
         return "Paths Without Crossing";
     }
 }
