@@ -1,4 +1,4 @@
-package main;
+package main.java.main;
 
 import levytskyi.CountingSort;
 import levytskyi.PathsWithoutCrossing;
@@ -25,7 +25,7 @@ public final class Main {
      * variable that contains all tasks
      * implemented by the team.
      */
-    private static final List<Algorithm> TASKS = new ArrayList<>();
+    private static final List<main.Algorithm> TASKS = new ArrayList<>();
     /**
      * the reader
      * to be used for getting information from the user

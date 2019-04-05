@@ -54,12 +54,9 @@ public class FindMaxSubSequenceLength implements Algorithm {
 
         try {
             seqOfNumber = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
             setNumSequence(seqOfNumber);
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             System.out.println("Invalid data, please try again");
             input(reader);
         }
