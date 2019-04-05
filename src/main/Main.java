@@ -6,6 +6,7 @@ import levytskyi.PathsWithoutCrossing;
 import hanuliak.FindMaxSubSequenceLength;
 import hanuliak.WaysToTileTheFloor;
 import narepeha.Fibonacci;
+import narepeha.LowAndHighEffort;
 import narepeha.QuickSort;
 import silich.InsertionSorting;
 import silich.WaysToCover;
@@ -15,12 +16,37 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+/**
+ * the main class with static method.
+ */
+public final class Main {
+    /**
+     * variable that contains all tasks
+     * implemented by the team.
+     */
+    private static final List<Algorithm> TASKS = new ArrayList<>();
+    /**
+     * the reader
+     * to be used for getting information from the user
+     * never close it inside your class!
+     */
+    private static final BufferedReader BUFFERED_READER;
 
-    private final static List<Algorithm> TASKS = new ArrayList<>();
-    private final static BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+    static {
+        BUFFERED_READER = new BufferedReader(new InputStreamReader(System.in));
+    }
 
-    public static void main(String[] args) {
+    /**
+     * private constructor
+     * to make this class impossible to instantiate.
+     */
+    private Main() {
+    }
+
+    /**
+     * @param args default parameters from the console
+     */
+    public static void main(final String[] args) {
 
         TASKS.add(new FindMaxSubSequenceLength());
         TASKS.add(new WaysToTileTheFloor());
@@ -30,6 +56,8 @@ public class Main {
         TASKS.add(new QuickSort());
         TASKS.add(new WaysToCover());
         TASKS.add(new InsertionSorting());
+        TASKS.add(new LowAndHighEffort());
+
         boolean onStatus = true;
         int chose = TASKS.size();
 
@@ -41,16 +69,15 @@ public class Main {
             System.out.println(TASKS.size() + " Exit");
 
             try {
-                chose = Integer.parseInt(bufferedReader.readLine());
+                chose = Integer.parseInt(BUFFERED_READER.readLine());
             } catch (Exception e) {
                 System.out.println("Try to write one more time");
             }
-
             if (chose == TASKS.size()) {
-                break;
+                onStatus = false; //exit
             }
             if (chose < TASKS.size()) {
-                TASKS.get(chose).start(bufferedReader);
+                TASKS.get(chose).start(BUFFERED_READER);
 
             }
             if (chose > TASKS.size()) {
