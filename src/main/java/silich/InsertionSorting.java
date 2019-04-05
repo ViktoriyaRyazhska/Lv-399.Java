@@ -1,5 +1,5 @@
 
-package main.java.silich;
+package silich;
 
 
 import main.java.main.Algorithm;

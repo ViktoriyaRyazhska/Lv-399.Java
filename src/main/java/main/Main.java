@@ -1,22 +1,21 @@
-package main.java.main;
+package main;
 
-import javafx.concurrent.Task;
-import levytskyi.CountingSort;
-import levytskyi.PathsWithoutCrossing;
 
+import chenchak.FriendPairs;
+import chenchak.InsertingRow;
+import chenchak.MergeSort;
 import hanuliak.FindMaxSubSequenceLength;
 import hanuliak.WaysToTileTheFloor;
-import main.java.chenchak.FriendPairs;
-import main.java.chenchak.InsertingRow;
-import main.java.chenchak.MergeSort;
+import levytskyi.CountingSort;
+import levytskyi.PathsWithoutCrossing;
 import narepeha.Fibonacci;
 import narepeha.LowAndHighEffort;
 import narepeha.QuickSort;
 import silich.InsertionSorting;
 import silich.WaysToCover;
 
+
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +28,7 @@ public final class Main {
      * variable that contains all tasks
      * implemented by the team.
      */
-    private static final List<Algorithm> TASKS = new ArrayList<>();
+    private static final List<main.java.main.Algorithm> TASKS = new ArrayList<>();
     /**
      * the reader
      * to be used for getting information from the user
@@ -66,11 +65,11 @@ public final class Main {
         TASKS.add(new InsertingRow());
         TASKS.add(new MergeSort());
 
-        boolean onStatus = true;
+        boolean isRunning = true;
         int chose = TASKS.size();
 
-        while (onStatus) {
-            System.out.println("Enter number of task or: \n");
+        while (isRunning) {
+            System.out.println("Enter number of task: \n");
             for (int i = 0; i < TASKS.size(); i++) {
                 System.out.println(i + " " + TASKS.get(i));
             }
@@ -79,19 +78,18 @@ public final class Main {
             try {
                 chose = Integer.parseInt(BUFFERED_READER.readLine());
             } catch (Exception e) {
-                System.out.println("Try to write one more time");
+                System.out.println("You can use letters only");
             }
-            if (chose == TASKS.size()) {
-                onStatus = false; //exit
-            }
-            if (chose < TASKS.size()) {
-                TASKS.get(chose).start(BUFFERED_READER);
 
-            }
-            if (chose > TASKS.size()) {
+            if (chose == TASKS.size()) {
+                isRunning=false;
+            } else if ((chose < TASKS.size()) && (chose >= 0)) {
+                TASKS.get(chose).start(BUFFERED_READER);
+            } else {
                 System.out.println("Try to write one more time");
             }
-            System.out.println("\n-----------------------------------------------");
+
+            System.out.println("\n------------------------------------------------------");
         }
     }
 }

@@ -1,4 +1,4 @@
-package main.java.nastyastr;
+package nastyastr;
 
 
 

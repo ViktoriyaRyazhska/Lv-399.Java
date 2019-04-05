@@ -3,7 +3,7 @@
  * @version 1.0
  * @since 1.0
  */
-package main.java.chenchak;
+package chenchak;
 
 
 import main.java.main.Algorithm;

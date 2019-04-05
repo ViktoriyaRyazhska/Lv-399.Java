@@ -1,4 +1,4 @@
-package main.java.verkholiak;
+package verkholiak;
 
 import main.java.main.Algorithm;
 
