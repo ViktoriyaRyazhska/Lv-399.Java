@@ -1,14 +1,10 @@
 package com.academy.softserve.levytskyi;
 
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
 public class CountingSortTest {
 
-    @Test
-    public void start() {
 
-
-    }
 }
