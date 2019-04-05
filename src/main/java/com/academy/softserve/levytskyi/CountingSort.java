@@ -4,7 +4,6 @@ package com.academy.softserve.levytskyi;
 import com.academy.softserve.main.java.main.Algorithm;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.util.Arrays;
 
 /**
@@ -51,11 +50,7 @@ public class CountingSort implements Algorithm {
         try {
             System.out.println("To finish tap the Enter\n"
                     + "Enter the elements dividing them by spaces: ");
-            try {
-                setNumSequence(bufferedReader.readLine());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            setNumSequence(bufferedReader.readLine());
             sort(numSequence);
             Arrays.stream(numSequence).forEach(value ->
                     System.out.print(value + " "));

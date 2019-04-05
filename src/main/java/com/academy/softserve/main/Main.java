@@ -76,7 +76,6 @@ public final class Main {
                 System.out.println(i + " " + TASKS.get(i));
             }
             System.out.println(TASKS.size() + " Exit");
-
             try {
                 chose = Integer.parseInt(BUFFERED_READER.readLine());
             } catch (Exception e) {
