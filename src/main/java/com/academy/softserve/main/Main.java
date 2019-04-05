@@ -1,8 +1,4 @@
-<<<<<<< HEAD:src/main/java/main/Main.java
-package main.java.main;
-=======
 package com.academy.softserve.main;
->>>>>>> 19a8197ba2a922bfc6593fb8faf67a1925c3a79e:src/main/java/com/academy/softserve/main/Main.java
 
 
 import com.academy.softserve.main.java.main.Algorithm;
