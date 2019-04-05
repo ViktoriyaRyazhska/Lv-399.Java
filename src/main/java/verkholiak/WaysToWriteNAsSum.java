@@ -1,4 +1,6 @@
-package main;
+package verkholiak;
+
+import main.Algorithm;
 
 import java.io.BufferedReader;
 import java.util.Arrays;
@@ -7,7 +9,7 @@ import java.util.Arrays;
  * Calculate how many ways to write n
  * as sum of two or more positive integers.
  */
-class WaysToWriteNAsSum implements Algorithm {
+public class WaysToWriteNAsSum implements Algorithm {
 
     /**
      * @param n The positive variable type integer

@@ -1,18 +1,18 @@
 package main;
 
-import levytskyi.CountingSort;
-import levytskyi.PathsWithoutCrossing;
-
 import hanuliak.FindMaxSubSequenceLength;
 import hanuliak.WaysToTileTheFloor;
+import levytskyi.CountingSort;
+import levytskyi.PathsWithoutCrossing;
 import narepeha.Fibonacci;
 import narepeha.LowAndHighEffort;
 import narepeha.QuickSort;
 import silich.InsertionSorting;
 import silich.WaysToCover;
+import verkholiak.OptimizedPaintingFence;
+import verkholiak.WaysToWriteNAsSum;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +58,8 @@ public final class Main {
         TASKS.add(new WaysToCover());
         TASKS.add(new InsertionSorting());
         TASKS.add(new LowAndHighEffort());
+        TASKS.add(new WaysToWriteNAsSum());
+        TASKS.add(new OptimizedPaintingFence());
 
         boolean onStatus = true;
         int chose = TASKS.size();

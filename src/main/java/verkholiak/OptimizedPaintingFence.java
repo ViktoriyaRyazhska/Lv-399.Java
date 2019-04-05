@@ -1,11 +1,13 @@
-package main;
+package verkholiak;
+
+import main.Algorithm;
 
 import java.io.BufferedReader;
 
 /**
  * Class which calculate combination of painting fence.
  */
-class OptimizedPaintingFence implements Algorithm {
+public class OptimizedPaintingFence implements Algorithm {
 
     /**
      * @param n Integer quantity of posts
