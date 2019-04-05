@@ -50,7 +50,7 @@ public class InsertingRow implements Algorithm {
     }
 
     private int[] convertStringToArrayOfIntegers(String inputString) {
-        String[] arrayOfString = inputString.split(", ");
+        String[] arrayOfString = inputString.split(" ");
         int[] arrayOfIntegers = new int[arrayOfString.length];
         for (int i = 0; i < arrayOfIntegers.length; i++) {
             arrayOfIntegers[i] = Integer.parseInt(arrayOfString[i]);

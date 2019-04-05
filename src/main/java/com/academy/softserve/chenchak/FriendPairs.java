@@ -45,7 +45,11 @@ public class FriendPairs implements Algorithm {
         int n = 0;
         try {
             n = Integer.parseInt(bufferedReader.readLine());
-            System.out.println(FriendPairs.countFriendsPairings(n));
+            if (n <3 ){
+                System.out.println("Must be >2");
+                start(bufferedReader);
+            }
+            System.out.println("Friend count : " + FriendPairs.countFriendsPairings(n));
         } catch (IOException e) {
             e.printStackTrace();
         }
