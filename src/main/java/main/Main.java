@@ -1,4 +1,4 @@
-package main.java.main;
+package main;
 
 
 import levytskyi.PathsWithoutCrossing;
@@ -29,7 +29,7 @@ public final class Main {
      * variable that contains all tasks
      * implemented by the team.
      */
-    private static final List<Algorithm> TASKS = new ArrayList<>();
+    private static final List<main.java.main.Algorithm> TASKS = new ArrayList<>();
     /**
      * the reader
      * to be used for getting information from the user
