@@ -77,7 +77,7 @@ public class WaysToTileTheFloor implements Algorithm {
      * @param m floor length
      * @return number of ways to tile
      */
-    private int calculate(final int n, final int m) {
+    public int calculate(final int n, final int m) {
         if (n < m) {
             return 1;
         }
