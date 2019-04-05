@@ -1,31 +1,45 @@
 package chenchak;
 
-import main.Algorithm;
+
+import main.java.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
+/**
+ * This class for task "Merge Sort".
+ */
 public class MergeSort implements Algorithm {
 
-    public int[] numSequence;
+    /**
+     * This is for input numbers from keyboard.
+     */
+    private int[] numSequence;
 
-
-    void merge(int arr[], int l, int m, int r) {
+    /**
+     * @param arr array
+     * @param l   length
+     * @param m   middle index in array.
+     * @param r   r
+     */
+    void merge(final int[] arr, final int l, final int m, final int r) {
         // Find sizes of two subarrays to be merged
         int n1 = m - l + 1;
         int n2 = r - m;
 
         /* Create temp arrays */
-        int L[] = new int[n1];
-        int R[] = new int[n2];
+        int[] l1 = new int[n1];
+        int[] r1 = new int[n2];
 
         /*Copy data to temp arrays*/
-        for (int i = 0; i < n1; ++i)
-            L[i] = arr[l + i];
-        for (int j = 0; j < n2; ++j)
-            R[j] = arr[m + 1 + j];
+        for (int i = 0; i < n1; ++i) {
+            l1[i] = arr[l + i];
+        }
+        for (int j = 0; j < n2; ++j) {
+            r1[j] = arr[m + 1 + j];
+        }
 
 
         /* Merge the temp arrays */
@@ -36,11 +50,11 @@ public class MergeSort implements Algorithm {
         // Initial index of merged subarry array
         int k = l;
         while (i < n1 && j < n2) {
-            if (L[i] <= R[j]) {
-                arr[k] = L[i];
+            if (l1[i] <= r1[j]) {
+                arr[k] = l1[i];
                 i++;
             } else {
-                arr[k] = R[j];
+                arr[k] = r1[j];
                 j++;
             }
             k++;
@@ -48,22 +62,25 @@ public class MergeSort implements Algorithm {
 
         /* Copy remaining elements of L[] if any */
         while (i < n1) {
-            arr[k] = L[i];
+            arr[k] = l1[i];
             i++;
             k++;
         }
 
         /* Copy remaining elements of R[] if any */
         while (j < n2) {
-            arr[k] = R[j];
+            arr[k] = r1[j];
             j++;
             k++;
         }
     }
 
-    // main.Main function that sorts arr[l..r] using
-    // merge()
-    void sort(int arr[], int l, int r) {
+    /**
+     * @param arr It`s array.
+     * @param l   It`s array length.
+     * @param r   r
+     */
+    void sort(final int[] arr, final int l, final int r) {
         if (l < r) {
             // Find the middle point
             int m = (l + r) / 2;
@@ -77,20 +94,25 @@ public class MergeSort implements Algorithm {
         }
     }
 
-    public void setNumSequence(String numSequence) {
-
-        String[] integerStrings = numSequence.split(" ");
+    /**
+     * @param newNumSequence This method for input number.
+     */
+    public void setNumSequence(final String newNumSequence) {
+        String[] integerStrings = newNumSequence.split(" ");
         this.numSequence = new int[integerStrings.length];
         for (int i = 0; i < this.numSequence.length; i++) {
             this.numSequence[i] = Integer.parseInt(integerStrings[i]);
         }
     }
 
-
+    /**
+     * Read number from keyboard, and save.
+     */
     public void input() {
         System.out.println("Please, input sequence of integer number:");
         String seqOfNumber = "";
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader =
+                new BufferedReader(new InputStreamReader(System.in));
         try {
             seqOfNumber = reader.readLine();
         } catch (IOException e) {
@@ -100,8 +122,14 @@ public class MergeSort implements Algorithm {
 
     }
 
+    /**
+     * This method uses merge sort. Prints your given array, then sorts.
+     *
+     * @param bufferedReader This value can read and save users array in
+     *                       another value.
+     */
     @Override
-    public void start(BufferedReader bufferedReader) {
+    public void start(final BufferedReader bufferedReader) {
         input();
         System.out.println("Given Array");
         Arrays.stream(numSequence).
@@ -114,8 +142,11 @@ public class MergeSort implements Algorithm {
                 forEach(value -> System.out.print(value + " "));
     }
 
+    /**
+     * @return class name.
+     */
     @Override
     public String toString() {
-        return "MergeSort{}";
+        return "MergeSort";
     }
 }
