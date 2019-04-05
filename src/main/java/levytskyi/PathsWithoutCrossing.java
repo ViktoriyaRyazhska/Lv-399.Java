@@ -53,11 +53,7 @@ public class PathsWithoutCrossing implements Algorithm {
     public void start(final BufferedReader bufferedReader) {
         try {
             System.out.println("Enter the even number: ");
-            try {
-                number = Integer.parseInt(bufferedReader.readLine());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            number = Integer.parseInt(bufferedReader.readLine());
             System.out.println("Ways to connect: " + countWays(number));
         } catch (Exception e) {
             System.out.println("Invalid data type \n "
