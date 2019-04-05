@@ -1,4 +1,4 @@
-package main.java.hanuliak;
+package hanuliak;
 
 
 import main.java.main.Algorithm;

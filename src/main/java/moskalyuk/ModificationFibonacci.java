@@ -1,4 +1,4 @@
-package main.java.moskalyuk;
+package moskalyuk;
 
 
 import main.java.main.Algorithm;

@@ -3,7 +3,7 @@
   2019
  */
 
-package main.java.narepeha;
+package narepeha;
 
 
 import main.java.main.Algorithm;

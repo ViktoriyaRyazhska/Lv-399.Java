@@ -1,4 +1,4 @@
-package main.java.chenchak;
+package chenchak;
 
 
 import main.java.main.Algorithm;
@@ -96,7 +96,7 @@ public class InsertingRow implements Algorithm {
      */
     @Override
     public String toString() {
-        return "InsertingRow{}";
+        return "InsertingRow";
     }
 }
 

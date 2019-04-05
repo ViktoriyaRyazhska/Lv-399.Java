@@ -1,4 +1,4 @@
-package main.java.levytskyi;
+package levytskyi;
 
 
 import main.java.main.Algorithm;

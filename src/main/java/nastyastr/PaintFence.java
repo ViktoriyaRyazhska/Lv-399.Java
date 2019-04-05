@@ -1,5 +1,5 @@
 
-package main.java.nastyastr;
+package nastyastr;
 
 
 import main.java.main.Algorithm;

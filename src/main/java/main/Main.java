@@ -1,20 +1,19 @@
 package main;
 
 
+import chenchak.FriendPairs;
+import chenchak.InsertingRow;
+import chenchak.MergeSort;
+import hanuliak.FindMaxSubSequenceLength;
+import hanuliak.WaysToTileTheFloor;
+import levytskyi.CountingSort;
 import levytskyi.PathsWithoutCrossing;
+import narepeha.Fibonacci;
+import narepeha.LowAndHighEffort;
+import narepeha.QuickSort;
+import silich.InsertionSorting;
+import silich.WaysToCover;
 
-
-import main.java.chenchak.FriendPairs;
-import main.java.chenchak.InsertingRow;
-import main.java.chenchak.MergeSort;
-import main.java.hanuliak.FindMaxSubSequenceLength;
-import main.java.hanuliak.WaysToTileTheFloor;
-import main.java.levytskyi.CountingSort;
-import main.java.narepeha.Fibonacci;
-import main.java.narepeha.LowAndHighEffort;
-import main.java.narepeha.QuickSort;
-import main.java.silich.InsertionSorting;
-import main.java.silich.WaysToCover;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -66,11 +65,11 @@ public final class Main {
         TASKS.add(new InsertingRow());
         TASKS.add(new MergeSort());
 
-        boolean onStatus = true;
+        boolean isRunning = true;
         int chose = TASKS.size();
 
-        while (onStatus) {
-            System.out.println("Enter number of task or: \n");
+        while (isRunning) {
+            System.out.println("Enter number of task: \n");
             for (int i = 0; i < TASKS.size(); i++) {
                 System.out.println(i + " " + TASKS.get(i));
             }
@@ -79,19 +78,18 @@ public final class Main {
             try {
                 chose = Integer.parseInt(BUFFERED_READER.readLine());
             } catch (Exception e) {
-                System.out.println("Try to write one more time");
+                System.out.println("You can use letters only");
             }
-            if (chose == TASKS.size()) {
-                onStatus = false; //exit
-            }
-            if (chose < TASKS.size()) {
-                TASKS.get(chose).start(BUFFERED_READER);
 
-            }
-            if (chose > TASKS.size()) {
+            if (chose == TASKS.size()) {
+                isRunning=false;
+            } else if ((chose < TASKS.size()) && (chose >= 0)) {
+                TASKS.get(chose).start(BUFFERED_READER);
+            } else {
                 System.out.println("Try to write one more time");
             }
-            System.out.println("\n-----------------------------------------------");
+
+            System.out.println("\n------------------------------------------------------");
         }
     }
 }

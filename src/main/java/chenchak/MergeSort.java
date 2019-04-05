@@ -1,4 +1,4 @@
-package main.java.chenchak;
+package chenchak;
 
 
 import main.java.main.Algorithm;
@@ -147,6 +147,6 @@ public class MergeSort implements Algorithm {
      */
     @Override
     public String toString() {
-        return "MergeSort{}";
+        return "MergeSort";
     }
 }
