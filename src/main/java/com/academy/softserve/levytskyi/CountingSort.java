@@ -19,10 +19,12 @@ public class CountingSort implements Algorithm {
      */
     private static int[] numSequence;
 
+
+
     /**
      * @param newNumSequence is not sorted array.
      */
-    private void sort(final int[] newNumSequence) {
+    public void sort(final int[] newNumSequence) {
         int n = newNumSequence.length;
         int[] output = new int[newNumSequence.length];
         int[] count = new int[MAX_VALUE];
@@ -64,12 +66,13 @@ public class CountingSort implements Algorithm {
     /**
      * @param newNumSequence array of numbers
      */
-    private void setNumSequence(final String newNumSequence) {
+    public int[] setNumSequence(final String newNumSequence) {
         String[] integerStrings = newNumSequence.split(" ");
         CountingSort.numSequence = new int[integerStrings.length];
         for (int i = 0; i < CountingSort.numSequence.length; i++) {
             CountingSort.numSequence[i] = Integer.parseInt(integerStrings[i]);
         }
+        return CountingSort.numSequence;
     }
 
     /**

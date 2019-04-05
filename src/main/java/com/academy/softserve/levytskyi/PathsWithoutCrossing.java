@@ -21,7 +21,7 @@ public class PathsWithoutCrossing implements Algorithm {
      * @param numberOfPoints amount of points.
      * @return amount of ways to do lines without crossing.
      */
-    private int calculateCountWays(final int numberOfPoints) {
+    public int calculateCountWays(final int numberOfPoints) {
         int[] arr = new int[numberOfPoints + 1];
         arr[0] = 1;
         arr[1] = 1;
@@ -38,7 +38,7 @@ public class PathsWithoutCrossing implements Algorithm {
      * @param amountOfPoints amount of points
      * @return amount of ways
      */
-    private int countWays(final int amountOfPoints) {
+    public int countWays(final int amountOfPoints) {
         if ((amountOfPoints < 1) || (amountOfPoints % 2 != 0)) {
             return 0;
         }
