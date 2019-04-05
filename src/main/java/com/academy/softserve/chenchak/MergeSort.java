@@ -5,7 +5,6 @@ import com.academy.softserve.main.java.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Arrays;
 
 /**
@@ -116,7 +115,13 @@ public class MergeSort implements Algorithm {
         }
     }
 
-    private int[] convertStringToArrayOfIntegers(String inputString) {
+    /**
+     * Method convert input string to array of integers.
+     *
+     * @param inputString input string from user
+     * @return array of integers
+     */
+    private int[] convertStringToArrayOfIntegers(final String inputString) {
         String[] arrayOfString = inputString.split(" ");
         int[] arrayOfIntegers = new int[arrayOfString.length];
         for (int i = 0; i < arrayOfIntegers.length; i++) {
