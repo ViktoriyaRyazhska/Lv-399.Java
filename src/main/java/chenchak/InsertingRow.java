@@ -13,82 +13,49 @@ import java.util.Arrays;
  */
 public class InsertingRow implements Algorithm {
 
-    /**
-     * This is for input numbers from keyboard.
-     */
-    private int[] numSequence;
-
-    /**
-     * @param newNumSequence This method for input number.
-     */
-    public void setNumSequence(final String newNumSequence) {
-        String[] integerStrings = newNumSequence.split(" ");
-        this.numSequence = new int[integerStrings.length];
-        for (int i = 0; i < this.numSequence.length; i++) {
-            this.numSequence[i] = Integer.parseInt(integerStrings[i]);
-        }
-    }
-
-    /**
-     * Read number from keyboard, and save.
-     */
-    public void input() {
-        System.out.println("Please, input sequence of integer number:");
-        String seqOfNumber = "";
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(System.in));
-        try {
-            seqOfNumber = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        setNumSequence(seqOfNumber);
-
-    }
-
-    /**
-     * @param number this is number which user enter.
-     * @return index.
-     */
-    public Integer findRow(final int number) {
-        for (int i = 0; i < numSequence.length; i++) {
-            if (number == numSequence[i]) {
-                return i;
-            }
-        }
-
-        return -1;
-    }
-
-    /**
-     * This method find row uses value.
-     *
-     * @param bufferedReader This value can read and save users array in
-     *                       another value.
-     */
     @Override
-    public void start(final BufferedReader bufferedReader) {
-        input();
-
-        System.out.println("Given Array");
-        Arrays.stream(numSequence).
-                forEach(value -> System.out.print(value + " "));
-        System.out.println();
-
-        System.out.println("Enter your number:");
-        int in = 0;
+    public void start(BufferedReader bufferedReader) {
         try {
-            in = Integer.parseInt(bufferedReader.readLine());
-            int result = findRow(in);
-            if (in == -1) {
-                System.out.println("Not found this element in array");
+            System.out.println("Please, input sequence of integer number:");
+            String seqOfNumber = bufferedReader.readLine();
+            int[] array = convertStringToArrayOfIntegers(seqOfNumber);
+            System.out.println("Plese, input number:");
+            int num = Integer.parseInt(bufferedReader.readLine());
+            if (num >=0) {
+                findRow(num, array);
             } else {
-                System.out.println("Index of this number: " + result);
+                System.out.println("Number must be > 0");
+                start(bufferedReader);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        } catch (IOException | NumberFormatException e) {
+            start(bufferedReader);
+
+        }
+    }
+
+    public void findRow(int number, int[] inputArray) {
+        boolean check = false;
+        for (int i = 0; i < inputArray.length; i++) {
+            if (number == inputArray[i]) {
+                System.out.println("Your number index: " + i);
+                check = true;
+                break;
+            }
         }
 
+        if (!check) {
+            System.out.println("Not found this index!");
+        }
+    }
+
+    private int[] convertStringToArrayOfIntegers(String inputString) {
+        String[] arrayOfString = inputString.split(", ");
+        int[] arrayOfIntegers = new int[arrayOfString.length];
+        for (int i = 0; i < arrayOfIntegers.length; i++) {
+            arrayOfIntegers[i] = Integer.parseInt(arrayOfString[i]);
+        }
+        return arrayOfIntegers;
     }
 
     /**
@@ -99,4 +66,3 @@ public class InsertingRow implements Algorithm {
         return "InsertingRow";
     }
 }
-
