@@ -22,10 +22,15 @@ public class BucketSort implements Algorithm {
      * Message for users.
      */
     private static final String FORMAT_EXAMPLE = "Example: 5, 3, 0, 2, 4, 1";
+    /**
+     * Format for output message.
+     */
+    private static final String FORMAT_OUTPUT_MSG = "Sorted array: ";
 
     /**
      * Method start receive data from console and invoke other method for
      * sorting it.
+     *
      * @param reader BufferRider object is the source of input data
      */
     public void start(final BufferedReader reader) {
@@ -35,6 +40,7 @@ public class BucketSort implements Algorithm {
             String inputString = reader.readLine();
             int[] integers = convertStringToArrayOfIntegers(inputString);
             sort(integers);
+            System.out.print(FORMAT_OUTPUT_MSG);
             printArray(integers);
         } catch (IOException ex) {
             System.out.println(ERROR_MSG);
@@ -44,6 +50,7 @@ public class BucketSort implements Algorithm {
 
     /**
      * Method convert input string to array of integers.
+     *
      * @param inputString input string from user
      * @return array of integers
      */
@@ -58,6 +65,7 @@ public class BucketSort implements Algorithm {
 
     /**
      * Method sort input array by bucket sort method.
+     *
      * @param inputArray unsorted array of integers
      */
     private void sort(final int[] inputArray) {
@@ -81,6 +89,7 @@ public class BucketSort implements Algorithm {
 
     /**
      * Method print input array to console.
+     *
      * @param integers input array
      */
     private void printArray(final int[] integers) {
