@@ -57,7 +57,7 @@ public class WaysToCover implements Algorithm {
         Integer number = 0;
         String inputString = "";
         try {
-            System.out.println("Input number:");
+            System.out.println("Input number which you want to decompose:");
             inputString = reader.readLine();
             number = Integer.parseInt(inputString);
         } catch (IOException e) {
@@ -68,6 +68,14 @@ public class WaysToCover implements Algorithm {
             number = parseToInt(reader);
         }
         return number;
+    }
+
+    /**
+     * This function describe algorithm
+     */
+    private void menu(){
+        System.out.println("Algorithm: ways to cover in 3 steps");
+        System.out.println("This function count ways to decompose any number 1, 2 or 3");
     }
 
     /**
