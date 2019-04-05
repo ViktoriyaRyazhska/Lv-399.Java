@@ -1,6 +1,7 @@
-package chenchak;
+package main.java.chenchak;
 
-import main.Algorithm;
+
+import main.java.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,29 +14,14 @@ import java.util.Arrays;
 public class InsertingRow implements Algorithm {
 
     /**
-     * This is for input number to keyboard.
+     * This is for input numbers from keyboard.
      */
     private int[] numSequence;
 
     /**
-     * @return numSequence.
-     */
-    public int[] getNumSequence() {
-        return numSequence;
-    }
-
-    /**
-     * @param newNumSequence numSequence
-     */
-    public void setNumSequence(final int[] newNumSequence) {
-        this.numSequence = newNumSequence;
-    }
-
-    /**
-     * @param newNumSequence numSequence
+     * @param newNumSequence This method for input number.
      */
     public void setNumSequence(final String newNumSequence) {
-
         String[] integerStrings = newNumSequence.split(" ");
         this.numSequence = new int[integerStrings.length];
         for (int i = 0; i < this.numSequence.length; i++) {
@@ -44,7 +30,7 @@ public class InsertingRow implements Algorithm {
     }
 
     /**
-     *
+     * Read number from keyboard, and save.
      */
     public void input() {
         System.out.println("Please, input sequence of integer number:");
@@ -61,7 +47,7 @@ public class InsertingRow implements Algorithm {
     }
 
     /**
-     * @param number number
+     * @param number this is number which user enter.
      * @return index.
      */
     public Integer findRow(final int number) {
@@ -75,7 +61,10 @@ public class InsertingRow implements Algorithm {
     }
 
     /**
-     * @param bufferedReader bufferedReader
+     * This method find row uses value.
+     *
+     * @param bufferedReader This value can read and save users array in
+     *                       another value.
      */
     @Override
     public void start(final BufferedReader bufferedReader) {

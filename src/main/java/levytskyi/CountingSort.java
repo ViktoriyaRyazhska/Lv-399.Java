@@ -1,6 +1,8 @@
-package levytskyi;
+package main.java.levytskyi;
 
-import main.Algorithm;
+
+import main.java.main.Algorithm;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Arrays;
