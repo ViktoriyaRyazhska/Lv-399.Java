@@ -6,102 +6,120 @@ import com.academy.softserve.main.java.main.Algorithm;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+/**
+ * This class  calculate the number of ways to tile the given
+ * floor using 1 x m tiles if tile can either be placed
+ * horizontally or vertically.
+ */
 public class WaysToTileTheFloor implements Algorithm {
 
+    /**
+     * Floor width.
+     */
     private int width;
+    /**
+     * Floor length.
+     */
     private int length;
-    private int countWay;
 
+    /**
+     * Class constructor.
+     */
     public WaysToTileTheFloor() {
     }
 
+    /**
+     * @return floor length.
+     */
     public int getLength() {
         return length;
     }
 
+    /**
+     * @return floor width.
+     */
     public int getWidth() {
         return width;
     }
 
-    public void setLength(String length) {
-        this.length = Integer.parseInt(length);
-    }
-
-    public void setWidth(String width) {
-        this.width = Integer.parseInt(width);
-    }
-
-
-    public void input(BufferedReader reader) {
-        String width;
-        String length;
-        System.out.println("Please, input floor width (integer number): ");
-
+    /**
+     * @param reader Read floor length from console.
+     */
+    public void setLength(final BufferedReader reader) {
+        String msgInvalidData = "Invalid data, please try again";
+        String msgBeforeInput = "Please, input length(m) (integer number):";
+        System.out.println(msgBeforeInput);
         try {
-            try {
-                width = reader.readLine();
-                setWidth(width);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            System.out.println("Please, input floor length (integer number): ");
-            try {
-                length = reader.readLine();
-                setLength(length);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            this.length = Integer.parseInt(reader.readLine());
         } catch (Exception e) {
-            System.out.println("Invalid data, please try again");
-            input(reader);
+            System.out.println(msgInvalidData);
+            setLength(reader);
         }
     }
 
-
-    public void output() {
-        System.out.println("Count ways to tile the floor: " + countWay);
-    }
-
-    public void calculate() {
-        countWay = calcCountWay(width, length);
+    /**
+     * @param reader Read floor width from console.
+     */
+    public void setWidth(final BufferedReader reader) {
+        String msgInvalidData = "Invalid data, please try again";
+        String msgBeforeInput = "Please, input width(n) (integer number):";
+        System.out.println(msgBeforeInput);
+        try {
+            this.width = Integer.parseInt(reader.readLine());
+        } catch (Exception e) {
+            System.out.println(msgInvalidData);
+            setWidth(reader);
+        }
     }
 
     /**
-     * @param n
-     * @param m
-     * @return
+     * @param n floor width
+     * @param m floor length
+     * @return number of ways to tile
      */
-    private int calcCountWay(int n, int m) {
+    private int calculate(final int n, final int m) {
         if (n < m) {
             return 1;
         }
         if (n == m) {
             return 2;
         }
-        return calcCountWay(n - 1, m) + calcCountWay(n - m, m);
+        return calculate(n - 1, m) + calculate(n - m, m);
     }
 
     /**
-     *
+     * This method print task goal.
      */
-    public void infoAboutTask() {
-        System.out.println("Goal: Given a floor of size n x m and tiles of size 1 x m. The problem");
-        System.out.println("is to count the number of ways to tile the given floor using 1 x m tiles.");
-        System.out.println("A tile can either be  placed horizontally or vertically.");
-
+    public void getGoalInfo() {
+        String msgGoalInfo =
+                "Goal: Given a floor of size n x m and tiles of "
+                        + "size 1 x m. The problem \n"
+                        + "is to count the number of ways to "
+                        + "tile the given floor using 1 x m tiles. \n"
+                        + "A tile can either be"
+                        + "  placed horizontally or vertically.";
+        System.out.println(msgGoalInfo);
     }
 
-    @Override
-    public void start(BufferedReader bufferedReader) {
-        infoAboutTask();
-        input(bufferedReader);
-        calculate();
-        output();
-    }
-
-
+    /**
+     * @return Task name for menu item.
+     */
     @Override
     public String toString() {
         return "Ways To Tile The Floor";
+    }
+
+    /**
+     * @param bufferedReader read data from console
+     */
+    @Override
+    public void start(final BufferedReader bufferedReader) {
+        String msgOutput = "Count ways to tile the floor: ";
+        int countWay;
+        getGoalInfo();
+        setWidth(bufferedReader);
+        setLength(bufferedReader);
+        countWay = calculate(width, length);
+        System.out.println(msgOutput + countWay);
     }
 }
