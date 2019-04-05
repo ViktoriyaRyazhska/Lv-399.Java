@@ -1,6 +1,5 @@
 package com.academy.softserve.moskalyuk;
 
-
 import com.academy.softserve.main.java.main.Algorithm;
 
 import java.io.BufferedReader;
@@ -10,7 +9,6 @@ import java.io.IOException;
  * This class contains methods that return longest palindrome subsequence.
  */
 public class PalindromicSubSequence implements Algorithm {
-
     /**
      * Message for users.
      */
@@ -19,16 +17,21 @@ public class PalindromicSubSequence implements Algorithm {
      * Message for users.
      */
     private static final String ERROR_MSG = "You must enter string!!!";
+    /**
+     * Format for output message.
+     */
+    private static final String FORMAT_OUTPUT_MSG = "Length of palindrome is %d";
 
     /**
-     * @param reader is BufferRider object
+     * Method print to console size of palindrome.
+     * @param reader BufferRider object is the source of input data
      */
     public void start(final BufferedReader reader) {
         System.out.println(ENTER_MSG);
         try {
             String inputString = reader.readLine();
             int length = getSizeOfPalindromeSubSequence(inputString);
-            System.out.println(length);
+            System.out.println(String.format(FORMAT_OUTPUT_MSG, length));
         } catch (IOException | ArrayIndexOutOfBoundsException e) {
             System.out.println(ERROR_MSG);
             start(reader);
@@ -36,7 +39,8 @@ public class PalindromicSubSequence implements Algorithm {
     }
 
     /**
-     * @param inputString
+     * Method return size of palindrome subsequence.
+     * @param inputString string from user
      * @return size of palindrome
      */
     private int getSizeOfPalindromeSubSequence(final String inputString) {
