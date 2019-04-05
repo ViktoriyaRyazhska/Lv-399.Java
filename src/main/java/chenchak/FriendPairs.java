@@ -1,3 +1,8 @@
+/**
+ * @author Illia Chenchak
+ * @version 1.0
+ * @since 1.0
+ */
 package chenchak;
 
 import main.Algorithm;
@@ -5,22 +10,33 @@ import main.Algorithm;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+/**
+ *This class search FriendPairs.
+ */
 public class FriendPairs implements Algorithm {
-    static int countFriendsPairings(int n) {
-        int dp[] = new int[n + 1];
+    /**
+     * @param n This is count of friend.
+     * @return countFriendsPairings.
+     */
+    static int countFriendsPairings(final int n) {
+        int[] dp = new int[n + 1];
 
         for (int i = 0; i <= n; i++) {
-            if (i <= 2)
+            if (i <= 2) {
                 dp[i] = i;
-            else
+            } else {
                 dp[i] = dp[i - 1] + (i - 1) * dp[i - 2];
+            }
         }
 
         return dp[n];
     }
 
+    /**
+     * @param bufferedReader
+     */
     @Override
-    public void start(BufferedReader bufferedReader) {
+    public void start(final BufferedReader bufferedReader) {
         System.out.println("Enter number of friends:");
         int n = 0;
         try {
@@ -31,6 +47,9 @@ public class FriendPairs implements Algorithm {
         }
     }
 
+    /**
+     * @return name of this methods.
+     */
     @Override
     public String toString() {
         return "Friend pairs";
