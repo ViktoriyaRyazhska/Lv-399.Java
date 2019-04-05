@@ -11,7 +11,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 /**
- *This class search FriendPairs.
+ * This class search FriendPairs.
  */
 public class FriendPairs implements Algorithm {
     /**
@@ -33,7 +33,10 @@ public class FriendPairs implements Algorithm {
     }
 
     /**
-     * @param bufferedReader
+     * This method find and print your friend pairs.
+     *
+     * @param bufferedReader This value can read and save users array in
+     *                       another value.
      */
     @Override
     public void start(final BufferedReader bufferedReader) {

@@ -13,29 +13,15 @@ import java.util.Arrays;
 public class MergeSort implements Algorithm {
 
     /**
-     *
+     * This is for input numbers from keyboard.
      */
     private int[] numSequence;
 
     /**
-     * @return numSequence.
-     */
-    public int[] getNumSequence() {
-        return numSequence;
-    }
-
-    /**
-     * @param newNumSequence Array for number.
-     */
-    public void setNumSequence(final int[] newNumSequence) {
-        this.numSequence = newNumSequence;
-    }
-
-    /**
      * @param arr array
-     * @param l length
-     * @param m m
-     * @param r r
+     * @param l   length
+     * @param m   middle index in array.
+     * @param r   r
      */
     void merge(final int[] arr, final int l, final int m, final int r) {
         // Find sizes of two subarrays to be merged
@@ -89,9 +75,9 @@ public class MergeSort implements Algorithm {
     }
 
     /**
-     * @param arr arr
-     * @param l l
-     * @param r r
+     * @param arr It`s array.
+     * @param l   It`s array length.
+     * @param r   r
      */
     void sort(final int[] arr, final int l, final int r) {
         if (l < r) {
@@ -108,7 +94,7 @@ public class MergeSort implements Algorithm {
     }
 
     /**
-     * @param newNumSequence numSequence
+     * @param newNumSequence This method for input number.
      */
     public void setNumSequence(final String newNumSequence) {
         String[] integerStrings = newNumSequence.split(" ");
@@ -119,7 +105,7 @@ public class MergeSort implements Algorithm {
     }
 
     /**
-     *
+     * Read number from keyboard, and save.
      */
     public void input() {
         System.out.println("Please, input sequence of integer number:");
@@ -136,7 +122,10 @@ public class MergeSort implements Algorithm {
     }
 
     /**
-     * @param bufferedReader
+     * This method uses merge sort. Prints your given array, then sorts.
+     *
+     * @param bufferedReader This value can read and save users array in
+     *                       another value.
      */
     @Override
     public void start(final BufferedReader bufferedReader) {
