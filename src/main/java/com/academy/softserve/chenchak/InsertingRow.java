@@ -23,11 +23,12 @@ public class InsertingRow implements Algorithm {
         try {
             System.out.println("Please, input sequence of integer number:");
             String seqOfNumber = bufferedReader.readLine();
+            String result;
             int[] array = convertStringToArrayOfIntegers(seqOfNumber);
             System.out.println("Plese, input number:");
             int num = Integer.parseInt(bufferedReader.readLine());
             if (num >= 0) {
-                findRow(num, array);
+                result = findRow(num, array);
             } else {
                 System.out.println("Number must be > 0");
                 start(bufferedReader);
@@ -42,22 +43,25 @@ public class InsertingRow implements Algorithm {
 
     /**
      * This method find index uses your number.
-     * @param number This is your number.
+     *
+     * @param number     This is your number.
      * @param inputArray this is array when we search number.
+     * @return result this is your finded index.
      */
-    public void findRow(final int number, final int[] inputArray) {
+    public String findRow(final int number, final int[] inputArray) {
         boolean check = false;
+        String result = "Your number index: ";
         for (int i = 0; i < inputArray.length; i++) {
             if (number == inputArray[i]) {
-                System.out.println("Your number index: " + i);
+                result += i + " ";
                 check = true;
                 break;
             }
         }
-
         if (!check) {
-            System.out.println("Not found this index!");
+            result += "Not found this index!";
         }
+        return result;
     }
 
     /**
