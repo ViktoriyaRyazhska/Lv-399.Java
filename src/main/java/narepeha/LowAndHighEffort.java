@@ -3,9 +3,11 @@
   2019
  */
 
-package narepeha;
+package main.java.narepeha;
 
-import main.Algorithm;
+
+import main.java.main.Algorithm;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 

@@ -3,9 +3,10 @@
  * @version 1.0
  * @since 1.0
  */
-package chenchak;
+package main.java.chenchak;
 
-import main.Algorithm;
+
+import main.java.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;

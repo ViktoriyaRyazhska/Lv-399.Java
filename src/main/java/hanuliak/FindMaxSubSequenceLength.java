@@ -1,6 +1,7 @@
-package hanuliak;
+package main.java.hanuliak;
 
-import main.Algorithm;
+
+import main.java.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -38,7 +39,7 @@ public class FindMaxSubSequenceLength implements Algorithm {
     /**
      * @param numSequence sequence number
      */
-    public void setNumSequence( String numSequence) {
+    public void setNumSequence(String numSequence) {
 
         String[] integerStrings = numSequence.split(" ");
         this.numSequence = new int[integerStrings.length];

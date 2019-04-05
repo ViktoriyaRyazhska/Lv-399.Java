@@ -1,8 +1,8 @@
 
-package silich;
+package main.java.silich;
 
 
-import main.Algorithm;
+import main.java.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;

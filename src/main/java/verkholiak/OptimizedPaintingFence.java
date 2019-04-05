@@ -1,4 +1,7 @@
-package main;
+package main.java.verkholiak;
+
+
+import main.java.main.Algorithm;
 
 import java.io.BufferedReader;
 

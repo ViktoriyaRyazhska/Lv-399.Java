@@ -1,6 +1,7 @@
-package hanuliak;
+package main.java.hanuliak;
 
-import main.Algorithm;
+
+import main.java.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -83,7 +84,7 @@ public class WaysToTileTheFloor implements Algorithm {
     /**
      *
      */
-    public  void infoAboutTask(){
+    public void infoAboutTask() {
         System.out.println("Goal: Given a floor of size n x m and tiles of size 1 x m. The problem");
         System.out.println("is to count the number of ways to tile the given floor using 1 x m tiles.");
         System.out.println("A tile can either be  placed horizontally or vertically.");
@@ -97,7 +98,6 @@ public class WaysToTileTheFloor implements Algorithm {
         calculate();
         output();
     }
-
 
 
     @Override

@@ -1,10 +1,14 @@
-package main;
+package main.java.main;
 
+import javafx.concurrent.Task;
 import levytskyi.CountingSort;
 import levytskyi.PathsWithoutCrossing;
 
 import hanuliak.FindMaxSubSequenceLength;
 import hanuliak.WaysToTileTheFloor;
+import main.java.chenchak.FriendPairs;
+import main.java.chenchak.InsertingRow;
+import main.java.chenchak.MergeSort;
 import narepeha.Fibonacci;
 import narepeha.LowAndHighEffort;
 import narepeha.QuickSort;
@@ -58,6 +62,9 @@ public final class Main {
         TASKS.add(new WaysToCover());
         TASKS.add(new InsertionSorting());
         TASKS.add(new LowAndHighEffort());
+        TASKS.add(new FriendPairs());
+        TASKS.add(new InsertingRow());
+        TASKS.add(new MergeSort());
 
         boolean onStatus = true;
         int chose = TASKS.size();
