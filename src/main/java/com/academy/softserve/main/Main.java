@@ -5,6 +5,7 @@ package com.academy.softserve.main;
 >>>>>>> 19a8197ba2a922bfc6593fb8faf67a1925c3a79e:src/main/java/com/academy/softserve/main/Main.java
 
 
+import com.academy.softserve.main.java.main.Algorithm;
 import com.academy.softserve.chenchak.FriendPairs;
 import com.academy.softserve.chenchak.InsertingRow;
 import com.academy.softserve.chenchak.MergeSort;
@@ -12,13 +13,12 @@ import com.academy.softserve.hanuliak.FindMaxSubSequenceLength;
 import com.academy.softserve.hanuliak.WaysToTileTheFloor;
 import com.academy.softserve.levytskyi.CountingSort;
 import com.academy.softserve.levytskyi.PathsWithoutCrossing;
-import com.academy.softserve.main.java.main.Algorithm;
 import com.academy.softserve.narepeha.Fibonacci;
 import com.academy.softserve.narepeha.LowAndHighEffort;
 import com.academy.softserve.narepeha.QuickSort;
 import com.academy.softserve.silich.InsertionSorting;
 import com.academy.softserve.silich.WaysToCover;
-
+import com.academy.softserve.verkholiak.*;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -43,7 +43,7 @@ public final class Main {
 
     static {
         BUFFERED_READER = new BufferedReader(new InputStreamReader(System.in));
-        TASKS = new ArrayList<Algorithm>();
+        TASKS = new ArrayList<>();
     }
 
     /**
@@ -70,6 +70,8 @@ public final class Main {
         TASKS.add(new FriendPairs());
         TASKS.add(new InsertingRow());
         TASKS.add(new MergeSort());
+        TASKS.add(new OptimizedPaintingFence());
+        TASKS.add(new WaysToWriteNAsSum());
 
         boolean isRunning = true;
         int chose = TASKS.size();
