@@ -10,8 +10,8 @@ com\academy\softserve\narepeha\LowAndHighEffort.class
 com\academy\softserve\silich\InsertionSorting.class
 com\academy\softserve\chenchak\MergeSort.class
 com\academy\softserve\levytskyi\CountingSort.class
+com\academy\softserve\verkholiak\WaysToWriteNAsSum.class
 com\academy\softserve\main\java\main\Algorithm.class
-com\academy\softserve\verkholiak\WaysToWrite_n_asSum.class
 com\academy\softserve\levytskyi\PathsWithoutCrossing.class
 com\academy\softserve\moskalyuk\ModificationFibonacci.class
 com\academy\softserve\narepeha\QuickSort.class
