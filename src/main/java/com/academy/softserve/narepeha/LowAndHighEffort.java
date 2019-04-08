@@ -2,11 +2,9 @@
   Open source project
   2019
  */
-
 package com.academy.softserve.narepeha;
 
-
-import com.academy.softserve.main.java.main.Algorithm;
+import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -42,7 +40,7 @@ public class LowAndHighEffort implements Algorithm {
             if (sizeOfInput < 0) {
                 throw new NumberFormatException();
             }
-            result = new int[2][sizeOfInput];
+            result = new int[2][sizeOfInput + 1]; //+1 because thus we don`t get IndexOutOfBound in future
             for (int i = 0; i < sizeOfInput; i++) {
                 input = bufferedReader
                         .readLine().split("\\s"); //separate by space
@@ -50,7 +48,9 @@ public class LowAndHighEffort implements Algorithm {
                 result[1][i] = Integer.parseInt(input[1]); //highEffortWork
             }
 
-        } catch (IOException | NumberFormatException e) {
+        } catch (IOException
+                | NumberFormatException
+                | ArrayIndexOutOfBoundsException e) {
             System.out.println("Invalid input");
             result = new int[2][1];
         }
@@ -66,11 +66,11 @@ public class LowAndHighEffort implements Algorithm {
      */
     private int computeResult(final int[][] input) {
         int result = 0;
-        result += input[0][0]; //add first high effort element
+        result += input[1][0]; //add first high effort element
         for (int i = 1;
              i < input[0].length;
              i++) { //and all others low effort elements
-            result += input[1][i];
+            result += input[0][i];
         }
         return result;
     }

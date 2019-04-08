@@ -19,26 +19,23 @@ public class PalindromicSubSequenceTest {
     }
 
     @Test
-    public void getIndexOfElementTest() throws InvocationTargetException, IllegalAccessException {
+    public void getSizeOfPalindromeSubSequenceTest() throws InvocationTargetException, IllegalAccessException {
         PalindromicSubSequence palindromicSubSequence = new PalindromicSubSequence();
         int result = (int) getSizeOfPalindromeSubSequence.invoke(palindromicSubSequence, "abba");
         assertTrue(result == 4);
-        result = (int)getSizeOfPalindromeSubSequence.invoke(palindromicSubSequence, ".....");
+        result = (int) getSizeOfPalindromeSubSequence.invoke(palindromicSubSequence, ".....");
         assertTrue(result == 5);
     }
 
-//    @Test(expected = ArrayIndexOutOfBoundsException.class)
-//    public void getIndexOfElementTest2() throws Throwable {
-//        PalindromicSubSequence palindromicSubSequence = new PalindromicSubSequence();
-//        try {
-//            int result = (int) getSizeOfPalindromeSubSequence.invoke(palindromicSubSequence, -1);
-//        } catch (InvocationTargetException e) {
-//            if (e.getCause().getClass() == ArrayIndexOutOfBoundsException.class) {
-//                throw e.getCause();
-//            }
-//        }
-//
-//
-//    }
-
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void getSizeOfPalindromeSubSequenceTest2() throws Throwable {
+        PalindromicSubSequence palindromicSubSequence = new PalindromicSubSequence();
+        try {
+            int result = (int) getSizeOfPalindromeSubSequence.invoke(palindromicSubSequence, "");
+        } catch (InvocationTargetException e) {
+            if (e.getCause().getClass() == ArrayIndexOutOfBoundsException.class) {
+                throw e.getCause();
+            }
+        }
+    }
 }

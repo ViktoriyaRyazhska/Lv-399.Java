@@ -3,7 +3,6 @@ package com.academy.softserve.narepeha;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.io.BufferedReader;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import static org.junit.Assert.assertEquals;
@@ -27,7 +26,7 @@ public class LowAndHighEffortTest {
                 {2,6}
         };
         int invoke = (int) computeResultTest.invoke(lowAndHihtEffort, (Object) template);
-        assertEquals(8,invoke);
+        assertEquals(4,invoke);
     }
 
     @Test
@@ -41,7 +40,7 @@ public class LowAndHighEffortTest {
                 {8,4}
         };
         int invoke = (int) computeResultTest.invoke(lowAndHihtEffort, (Object) template);
-        assertEquals(10,invoke);
+        assertEquals(8,invoke);
     }
 
 }

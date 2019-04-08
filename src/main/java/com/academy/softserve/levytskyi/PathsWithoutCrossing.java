@@ -1,11 +1,9 @@
 
 package com.academy.softserve.levytskyi;
 
-
-import com.academy.softserve.main.java.main.Algorithm;
+import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;
-
 
 /**
  * This class is count number of ways to connect n (where n is even)

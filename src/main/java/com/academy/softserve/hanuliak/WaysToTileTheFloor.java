@@ -1,10 +1,8 @@
 package com.academy.softserve.hanuliak;
 
-
-import com.academy.softserve.main.java.main.Algorithm;
+import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 
 /**
  * This class  calculate the number of ways to tile the given
@@ -77,7 +75,7 @@ public class WaysToTileTheFloor implements Algorithm {
      * @param m floor length
      * @return number of ways to tile
      */
-    private int calculate(final int n, final int m) {
+    public int calculate(final int n, final int m) {
         if (n < m) {
             return 1;
         }
