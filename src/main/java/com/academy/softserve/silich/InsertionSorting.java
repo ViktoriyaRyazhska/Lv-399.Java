@@ -34,9 +34,10 @@ public class InsertionSorting implements Algorithm {
         System.out.println(array);
     }
 
-    private void menu(){
+    private void menu() {
         System.out.println("This function sorting arrays");
     }
+
     /**
      * @param reader has type of BufferedReader
      * @return array of Integer. Type ArrayList
