@@ -41,4 +41,17 @@ public class FibonacciTest {
         assertArrayEquals(template.toArray(), invoke.toArray());
 
     }
+
+    @Test
+    public void genSeqToTest2() throws InvocationTargetException, IllegalAccessException {
+        List<BigInteger> template = new ArrayList<>();
+        template.add(new BigInteger("1"));
+        template.add(new BigInteger("1"));
+        Fibonacci fibonacci = new Fibonacci();
+        int position = -1;
+        List<BigInteger> invoke = (List<BigInteger>) genSeqToTest.invoke(fibonacci, position);
+        System.out.println(invoke);
+        assertArrayEquals(template.toArray(), invoke.toArray());
+
+    }
 }

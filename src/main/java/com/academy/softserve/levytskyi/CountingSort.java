@@ -63,6 +63,7 @@ public class CountingSort implements Algorithm {
 
     /**
      * @param newNumSequence array of numbers
+     * @return array of numbers
      */
     private int[] setNumSequence(final String newNumSequence) {
         String[] integerStrings = newNumSequence.split(" ");
