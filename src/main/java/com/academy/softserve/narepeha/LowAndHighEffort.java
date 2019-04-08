@@ -40,7 +40,7 @@ public class LowAndHighEffort implements Algorithm {
             if (sizeOfInput < 0) {
                 throw new NumberFormatException();
             }
-            result = new int[2][sizeOfInput+1]; //+1 because thus we don`t get IndexOutOfBound in Future
+            result = new int[2][sizeOfInput + 1]; //+1 because thus we don`t get IndexOutOfBound in future
             for (int i = 0; i < sizeOfInput; i++) {
                 input = bufferedReader
                         .readLine().split("\\s"); //separate by space
@@ -48,7 +48,9 @@ public class LowAndHighEffort implements Algorithm {
                 result[1][i] = Integer.parseInt(input[1]); //highEffortWork
             }
 
-        } catch (IOException | NumberFormatException e) {
+        } catch (IOException
+                | NumberFormatException
+                | ArrayIndexOutOfBoundsException e) {
             System.out.println("Invalid input");
             result = new int[2][1];
         }
