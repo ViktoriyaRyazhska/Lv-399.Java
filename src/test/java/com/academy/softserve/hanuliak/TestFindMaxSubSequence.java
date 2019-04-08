@@ -1,7 +1,6 @@
-package java.com.academy.softserve.hanuliak;
+package com.academy.softserve.hanuliak;
 
 import com.academy.softserve.hanuliak.FindMaxSubSequenceLength;
-import com.academy.softserve.nastyastr.SumUpNumbersToArray;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -14,5 +13,22 @@ import static org.junit.Assert.*;
  */
 public class TestFindMaxSubSequence {
 
+
+
+    @Test
+    public void calculateTestWithDifferentValueInArray() {
+        FindMaxSubSequenceLength findMaxSubSequenceLength = new FindMaxSubSequenceLength();
+        int[] arr = new int[] {1,2,3,4};
+        findMaxSubSequenceLength.numSequence = arr;
+        assertEquals(4,findMaxSubSequenceLength.calculate());
+    }
+
+    @Test
+    public void calculateTestWithSameValueInArray() {
+        FindMaxSubSequenceLength findMaxSubSequenceLength = new FindMaxSubSequenceLength();
+        int[] arr = new int[] {1,2,3,4,4};
+        findMaxSubSequenceLength.numSequence = arr;
+        assertEquals(4,findMaxSubSequenceLength.calculate());
+    }
 
 }
