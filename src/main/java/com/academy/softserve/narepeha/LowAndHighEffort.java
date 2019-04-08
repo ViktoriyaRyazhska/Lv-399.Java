@@ -39,6 +39,9 @@ public class LowAndHighEffort implements Algorithm {
         try {
             int sizeOfInput = Integer.parseInt(bufferedReader.readLine());
             String[] input;
+            if (sizeOfInput < 0) {
+                throw new NumberFormatException();
+            }
             result = new int[2][sizeOfInput];
             for (int i = 0; i < sizeOfInput; i++) {
                 input = bufferedReader
