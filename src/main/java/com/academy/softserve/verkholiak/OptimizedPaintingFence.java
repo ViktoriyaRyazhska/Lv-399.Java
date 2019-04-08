@@ -1,20 +1,29 @@
 package com.academy.softserve.verkholiak;
 
-import com.academy.softserve.main.java.main.Algorithm;
+import com.academy.softserve.main.Algorithm;
+
 import java.io.BufferedReader;
 
 /**
  * Class which calculate combination of painting fence.
  */
 public class OptimizedPaintingFence implements Algorithm {
+    /**
+     *n - number of posts.
+     */
+    private int n;
+    /**
+     * k - number of colours.
+     */
+    private int k;
 
     /**
-     * @param n Integer quantity of posts
-     * @param k Integer quantity of colors
-     * @return Returns count of ways to color k posts using k colors
+     * @return long - ways to paint the fence
      */
-    private static long countWays(final int n, final int k) {
-
+    public long countWays() {
+        if ((n < 1) || (k < 1)) {
+            return -1;
+        }
         long total = k;
         long diff = k;
         long same;
@@ -39,17 +48,19 @@ public class OptimizedPaintingFence implements Algorithm {
         System.out.println("Given a fence with n posts and k colors,\n"
                 + "find out the number of ways of painting the fence "
                 + "such that at most 2 adjacent posts have the same color. ");
-        System.out.println("Enter n ");
+        System.out.println("Enter posts ");
 
-        int n;
-        int k;
+      /*  int n;
+        int k;*/
 
         try {
-            n = Integer.parseInt(bufferedReader.readLine());
-            System.out.println("Enter k ");
-            k = Integer.parseInt(bufferedReader.readLine());
-            if ((n > 1) && (k > 1)) {
-                System.out.println("There are " + countWays(n, k)
+            String posts = bufferedReader.readLine();
+            System.out.println("Enter colours ");
+            String colours = bufferedReader.readLine();
+            input(posts, colours);
+            long ways = countWays();
+            if (ways != -1) {
+                System.out.println("There are " + countWays()
                         + " ways of painting the fence");
             } else {
                 System.out.println("Numbers must be bigger than one");
@@ -63,6 +74,35 @@ public class OptimizedPaintingFence implements Algorithm {
     }
 
     /**
+     * @param posts posts to colour
+     * @param colours number of colours for colouring posts
+     * @throws Exception throws exception in case of wrong input
+     */
+    public void input(final String posts,
+                      final String colours) throws Exception {
+        try {
+            n = Integer.parseInt(posts);
+            k = Integer.parseInt(colours);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    /**
+     * @param posts set number of posts
+     */
+    public void setN(final int posts) {
+        this.n = posts;
+    }
+
+    /**
+     * @param colours set number of colours
+     */
+    public void setK(final int colours) {
+        this.k = colours;
+    }
+
+    /**
      * @return The string of information
      */
     @Override
@@ -70,3 +110,4 @@ public class OptimizedPaintingFence implements Algorithm {
         return "Optimized painting fence: use one variable instead of a table";
     }
 }
+

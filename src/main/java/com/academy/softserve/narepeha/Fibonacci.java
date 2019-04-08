@@ -2,11 +2,9 @@
   Open source project
   2019
  */
-
 package com.academy.softserve.narepeha;
 
-
-import com.academy.softserve.main.java.main.Algorithm;
+import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;

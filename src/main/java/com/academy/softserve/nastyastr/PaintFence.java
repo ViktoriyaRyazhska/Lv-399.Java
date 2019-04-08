@@ -1,12 +1,10 @@
-
 package com.academy.softserve.nastyastr;
 
-
-import com.academy.softserve.main.java.main.Algorithm;
+import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-
+import java.util.Arrays;
 
 /**
  * class to sum an array of numbers to a given number.
@@ -45,7 +43,7 @@ public class PaintFence implements Algorithm {
     }
 
     /**
-     * @param bufferedReader
+     * @param bufferedReader for reading user input
      */
     @Override
     public void start(final BufferedReader bufferedReader) {
@@ -62,9 +60,11 @@ public class PaintFence implements Algorithm {
         } catch (IOException io) {
             io.printStackTrace();
         }
+
         System.out.println(n
                 + " posts can be painted in "
                 + k + " colours in " + calc(n,k) + " ways");
+
     }
 
     /**

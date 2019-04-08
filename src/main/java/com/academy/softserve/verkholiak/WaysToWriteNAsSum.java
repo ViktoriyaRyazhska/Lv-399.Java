@@ -1,6 +1,6 @@
 package com.academy.softserve.verkholiak;
 
-import com.academy.softserve.main.java.main.Algorithm;
+import com.academy.softserve.main.Algorithm;
 import java.io.BufferedReader;
 import java.util.Arrays;
 

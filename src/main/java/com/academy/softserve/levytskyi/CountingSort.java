@@ -1,7 +1,6 @@
 package com.academy.softserve.levytskyi;
 
-
-import com.academy.softserve.main.java.main.Algorithm;
+import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.util.Arrays;
@@ -49,7 +48,7 @@ public class CountingSort implements Algorithm {
     public void start(final BufferedReader bufferedReader) {
         try {
             System.out.println("To finish tap the Enter\n"
-                    + "Enter the elements dividing them by spaces: ");
+                    + "Enter positive elements dividing them by spaces: ");
             setNumSequence(bufferedReader.readLine());
             sort(numSequence);
             Arrays.stream(numSequence).forEach(value ->
@@ -64,12 +63,13 @@ public class CountingSort implements Algorithm {
     /**
      * @param newNumSequence array of numbers
      */
-    private void setNumSequence(final String newNumSequence) {
+    private int[] setNumSequence(final String newNumSequence) {
         String[] integerStrings = newNumSequence.split(" ");
         CountingSort.numSequence = new int[integerStrings.length];
         for (int i = 0; i < CountingSort.numSequence.length; i++) {
             CountingSort.numSequence[i] = Integer.parseInt(integerStrings[i]);
         }
+        return numSequence;
     }
 
     /**
