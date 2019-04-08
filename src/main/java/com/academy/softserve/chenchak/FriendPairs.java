@@ -5,7 +5,6 @@
  */
 package com.academy.softserve.chenchak;
 
-
 import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;

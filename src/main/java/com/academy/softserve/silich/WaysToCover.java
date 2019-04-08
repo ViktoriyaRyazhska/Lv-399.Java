@@ -1,12 +1,9 @@
-
 package com.academy.softserve.silich;
-
 
 import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-
 
 /**
  * @author Oleksandr

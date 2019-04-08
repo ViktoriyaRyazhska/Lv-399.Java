@@ -1,12 +1,9 @@
-
 package com.academy.softserve.nastyastr;
-
 
 import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-
 
 /**
  * class to sum an array of numbers to a given number.

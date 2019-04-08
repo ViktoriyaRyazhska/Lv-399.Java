@@ -1,6 +1,5 @@
 package com.academy.softserve.nastyastr;
 
-
 import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;

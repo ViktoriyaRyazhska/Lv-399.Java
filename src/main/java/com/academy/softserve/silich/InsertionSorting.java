@@ -1,6 +1,4 @@
-
 package com.academy.softserve.silich;
-
 
 import com.academy.softserve.main.Algorithm;
 
