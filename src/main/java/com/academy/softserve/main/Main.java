@@ -1,7 +1,5 @@
 package com.academy.softserve.main;
 
-
-
 import com.academy.softserve.chenchak.FriendPairs;
 import com.academy.softserve.chenchak.InsertingRow;
 import com.academy.softserve.chenchak.MergeSort;

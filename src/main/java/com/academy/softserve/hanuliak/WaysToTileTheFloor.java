@@ -1,7 +1,5 @@
 package com.academy.softserve.hanuliak;
 
-
-
 import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;

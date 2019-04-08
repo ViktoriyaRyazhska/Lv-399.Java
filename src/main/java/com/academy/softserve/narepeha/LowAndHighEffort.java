@@ -2,10 +2,7 @@
   Open source project
   2019
  */
-
 package com.academy.softserve.narepeha;
-
-
 
 import com.academy.softserve.main.Algorithm;
 

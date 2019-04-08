@@ -1,6 +1,5 @@
 package com.academy.softserve.moskalyuk;
 
-
 import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;
@@ -49,6 +48,7 @@ public class ModificationFibonacci implements Algorithm {
 
     /**
      * Method print index of required element.
+     *
      * @param reader BufferRider object is the source of input data
      */
     @Override
@@ -67,6 +67,7 @@ public class ModificationFibonacci implements Algorithm {
 
     /**
      * Method return index of required element.
+     *
      * @param number required element from sequence
      * @return index of element
      */

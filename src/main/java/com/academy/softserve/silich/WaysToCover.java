@@ -1,13 +1,9 @@
-
 package com.academy.softserve.silich;
-
-
 
 import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-
 
 /**
  * @author Oleksandr
@@ -74,7 +70,7 @@ public class WaysToCover implements Algorithm {
     /**
      * This function describe algorithm
      */
-    private void menu(){
+    private void menu() {
         System.out.println("Algorithm: ways to cover in 3 steps");
         System.out.println("This function count ways to decompose any number 1, 2 or 3");
     }
