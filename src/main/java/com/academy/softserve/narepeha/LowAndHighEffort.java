@@ -2,11 +2,9 @@
   Open source project
   2019
  */
-
 package com.academy.softserve.narepeha;
 
-
-import com.academy.softserve.main.java.main.Algorithm;
+import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -39,6 +37,9 @@ public class LowAndHighEffort implements Algorithm {
         try {
             int sizeOfInput = Integer.parseInt(bufferedReader.readLine());
             String[] input;
+            if (sizeOfInput < 0) {
+                throw new NumberFormatException();
+            }
             result = new int[2][sizeOfInput];
             for (int i = 0; i < sizeOfInput; i++) {
                 input = bufferedReader
