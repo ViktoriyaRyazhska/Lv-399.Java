@@ -52,11 +52,10 @@ public class Fibonacci implements Algorithm {
     private Integer getInput(final BufferedReader bufferedReader) {
         try {
             return Integer.valueOf(bufferedReader.readLine());
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignored) {
+
         } catch (NumberFormatException e) {
             System.out.println("Invalid input");
-
         }
         return null;
     }
@@ -67,7 +66,9 @@ public class Fibonacci implements Algorithm {
      * @param index of element
      */
     private void printOutputFor(final Integer index) {
-        System.out.println("Output: " + sequence.get(index - 1));
+        if (index > 0) {
+            System.out.println("Output: " + sequence.get(index - 1));
+        }
     }
 
     /**
@@ -104,8 +105,10 @@ public class Fibonacci implements Algorithm {
     public void start(final BufferedReader bufferedReader) {
         printMenu();
         Integer index = getInput(bufferedReader);
-        genSeqTo(index);
-        printOutputFor(index);
+        if (index != null) {
+            genSeqTo(index);
+            printOutputFor(index);
+        }
     }
 
 }

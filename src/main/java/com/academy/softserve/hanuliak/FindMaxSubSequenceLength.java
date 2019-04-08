@@ -4,79 +4,63 @@ package com.academy.softserve.hanuliak;
 import com.academy.softserve.main.java.main.Algorithm;
 
 import java.io.BufferedReader;
-import java.io.IOException;
-
 
 /**
- *
+ * This class use to find how many numbers we have with difference
+ * one in the maximum sub sequence.
  */
 public class FindMaxSubSequenceLength implements Algorithm {
-
-
     /**
-     * num.
+     * Sequence of integer number.
      */
     private int[] numSequence;
-    /**
-     * max.
-     */
-    private int maxSubSequenceLength;
-
 
     /**
-     * constructor.
+     * Class constructor.
      */
     public FindMaxSubSequenceLength() {
     }
 
     /**
-     * @return num.
+     * @return Sequence of integer number in array.
      */
     public int[] getNumSequence() {
         return numSequence;
     }
 
     /**
-     * @param numSequence sequence number
+     * @param reader Read sequence of number from cmd.
      */
-    public void setNumSequence(String numSequence) {
-
-        String[] integerStrings = numSequence.split(" ");
-        this.numSequence = new int[integerStrings.length];
-        for (int i = 0; i < this.numSequence.length; i++) {
-            this.numSequence[i] = Integer.parseInt(integerStrings[i]);
-        }
-    }
-
-
-    public void input(BufferedReader reader) {
-        System.out.println("Please, input sequence of integer number (separate by space) :");
-        String seqOfNumber = "";
-
+    public void setNumSequence(final BufferedReader reader) {
+        String msgInvalidData = "Invalid data, please try again";
+        String msgBeforeInput = "Please, input number sequence "
+                + "(split by space):";
+        String numSequenceStr = "";
+        String[] integerStrings;
+        System.out.println(msgBeforeInput);
         try {
-            seqOfNumber = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            setNumSequence(seqOfNumber);
+            numSequenceStr = reader.readLine();
+            integerStrings = numSequenceStr.split(" ");
+            this.numSequence = new int[integerStrings.length];
+            for (int i = 0; i < this.numSequence.length; i++) {
+                this.numSequence[i] = Integer.parseInt(integerStrings[i]);
+            }
         } catch (Exception e) {
-            System.out.println("Invalid data, please try again");
-            input(reader);
+
+            System.out.println(msgInvalidData);
+            setNumSequence(reader);
         }
-
     }
 
-
-    public void output() {
-        System.out.println("MaxSubSequenceLength = " + maxSubSequenceLength);
-    }
-
-
-    public void calculate() {
+    /**
+     * Calculate how many numbers we have with difference
+     * one in the maximum sub sequence.
+     *
+     * @return maximum sub sequence length.
+     */
+    public int calculate() {
         int currentSubSequenceLength = 1;
-
-        maxSubSequenceLength = 1;
+        int maxSubSequenceLength = 1;
         int difference;
 
         for (int i = 1; i < numSequence.length; i++) {
@@ -90,27 +74,36 @@ public class FindMaxSubSequenceLength implements Algorithm {
                 currentSubSequenceLength = 1;
             }
         }
+
+        return maxSubSequenceLength;
     }
 
-    public void infoAboutTask() {
-        System.out.println("The goal: To find how many numbers we have with difference one in  ");
-        System.out.println("the maximum sub sequence");
-
+    /**
+     * Print info about task goal.
+     */
+    public void getGoalInfo() {
+        String msgGoal = "The goal: To find how many numbers we have with "
+                + "difference one in \nthe maximum sub sequence";
+        System.out.println(msgGoal);
     }
 
-    @Override
-    public void start(BufferedReader bufferedReader) {
-        infoAboutTask();
-        input(bufferedReader);
-        calculate();
-        output();
-    }
-
-
+    /**
+     * @return Task name for menu item.
+     */
     @Override
     public String toString() {
-        return "Find max sub sequence length";
-
+        String msgTaskName = "Find Max SubSequence Length";
+        return msgTaskName;
     }
 
+    /**
+     * @param bufferedReader Read number sequence from console.
+     */
+    @Override
+    public void start(final BufferedReader bufferedReader) {
+        String msgSeqOutput = "Max sub sequence length = ";
+        getGoalInfo();
+        setNumSequence(bufferedReader);
+        System.out.println(msgSeqOutput + calculate());
+    }
 }
