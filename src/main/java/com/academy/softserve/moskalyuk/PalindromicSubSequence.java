@@ -24,6 +24,7 @@ public class PalindromicSubSequence implements Algorithm {
 
     /**
      * Method print to console size of palindrome.
+     *
      * @param reader BufferRider object is the source of input data
      */
     public void start(final BufferedReader reader) {
@@ -40,6 +41,7 @@ public class PalindromicSubSequence implements Algorithm {
 
     /**
      * Method return size of palindrome subsequence.
+     *
      * @param inputString string from user
      * @return size of palindrome
      */
