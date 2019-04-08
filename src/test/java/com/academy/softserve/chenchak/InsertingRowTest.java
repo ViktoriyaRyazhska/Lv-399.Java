@@ -1,5 +1,6 @@
-package com.academy.softserve.chenchak;
+package java.com.academy.softserve.chenchak;
 
+import com.academy.softserve.chenchak.InsertingRow;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

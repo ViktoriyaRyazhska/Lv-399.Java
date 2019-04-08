@@ -1,4 +1,4 @@
-package com.academy.softserve.chenchak;
+package java.com.academy.softserve.hanuliak;
 
 import com.academy.softserve.hanuliak.WaysToTileTheFloor;
 import org.junit.*;
