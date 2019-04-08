@@ -1,12 +1,9 @@
 package com.academy.softserve.chenchak;
 
-
-
 import com.academy.softserve.main.Algorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-
 
 /**
  * This class for task "Inserting row".
@@ -43,7 +40,8 @@ public class InsertingRow implements Algorithm {
 
     /**
      * This method find index uses your number.
-     * @param number This is your number.
+     *
+     * @param number     This is your number.
      * @param inputArray this is array when we search number.
      */
     public void findRow(final int number, final int[] inputArray) {
