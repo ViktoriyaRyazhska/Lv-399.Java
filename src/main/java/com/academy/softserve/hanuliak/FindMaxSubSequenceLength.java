@@ -12,7 +12,7 @@ public class FindMaxSubSequenceLength implements Algorithm {
     /**
      * Sequence of integer number.
      */
-    private int[] numSequence;
+    public int[] numSequence;
 
     /**
      * Class constructor.
