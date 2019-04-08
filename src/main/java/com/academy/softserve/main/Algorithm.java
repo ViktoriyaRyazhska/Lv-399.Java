@@ -1,4 +1,4 @@
-package com.academy.softserve.main.java.main;
+package com.academy.softserve.main;
 
 import java.io.BufferedReader;
 
