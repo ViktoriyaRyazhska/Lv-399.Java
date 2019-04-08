@@ -78,7 +78,7 @@ public class Fibonacci implements Algorithm {
      *
      * @param lastPosition position that sequence should be generated to
      */
-    private void genSeqTo(final int lastPosition) {
+    private List<BigInteger> genSeqTo(final int lastPosition) {
         int initialSeqSize = sequence.size();
         for (int i = 0; i <= lastPosition - initialSeqSize; i++) {
             int currentSize = sequence.size();
@@ -86,6 +86,7 @@ public class Fibonacci implements Algorithm {
                     .add(sequence.get(currentSize - 2));
             sequence.add(newElement);
         }
+        return sequence;
     }
 
     /**
