@@ -1,17 +1,33 @@
 package com.academy.softserve.silich;
 
-import org.junit.After;
-import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.Assert.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+import static org.junit.Assert.assertEquals;
 
 public class WaysToCoverTest {
 
-    @Before
-    public void setUp() throws Exception {
+    public Method coverWays;
+
+    @Test
+    public void coverWaysTest() throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
+        coverWays = WaysToCover.class.getDeclaredMethod("coverWays", Integer.class);
+        coverWays.setAccessible(true);
+        WaysToCover waysToCover = new WaysToCover();
+        Integer a = (Integer) coverWays.invoke(waysToCover, 5);
+        Integer b = 13;
+        assertEquals(a, b);
     }
 
-    @After
-    public void tearDown() throws Exception {
+    @Test
+    public void coverWaysTest2() throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
+        coverWays = WaysToCover.class.getDeclaredMethod("coverWays", Integer.class);
+        coverWays.setAccessible(true);
+        WaysToCover waysToCover = new WaysToCover();
+        Integer a = (Integer) coverWays.invoke(waysToCover, 10);
+        Integer b = 274;
+        assertEquals(a, b);
     }
 }
