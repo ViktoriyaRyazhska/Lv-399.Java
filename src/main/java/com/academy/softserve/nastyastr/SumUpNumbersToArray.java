@@ -13,6 +13,10 @@ public class SumUpNumbersToArray implements Algorithm {
     private int[] numSequence;
     /**ways to sum up numbers.*/
     private int ways;
+
+    public  int[] getNumSequence(){
+        return numSequence;
+    }
     /**method for parsing numbers from a given array.
      * @param sequence an array of integer numbers .*/
     public void setNumSequence(final String sequence) {
