@@ -64,12 +64,13 @@ public class CountingSort implements Algorithm {
     /**
      * @param newNumSequence array of numbers
      */
-    private void setNumSequence(final String newNumSequence) {
+    private int[] setNumSequence(final String newNumSequence) {
         String[] integerStrings = newNumSequence.split(" ");
         CountingSort.numSequence = new int[integerStrings.length];
         for (int i = 0; i < CountingSort.numSequence.length; i++) {
             CountingSort.numSequence[i] = Integer.parseInt(integerStrings[i]);
         }
+        return numSequence;
     }
 
     /**
