@@ -32,6 +32,9 @@ public class InsertionSorting implements Algorithm {
         System.out.println(array);
     }
 
+    /**
+     * Describe functions from algorithm.
+     */
     private void menu() {
         System.out.println("This function sorting arrays");
     }
