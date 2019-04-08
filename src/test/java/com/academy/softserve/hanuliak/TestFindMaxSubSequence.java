@@ -14,21 +14,20 @@ import static org.junit.Assert.*;
 public class TestFindMaxSubSequence {
 
 
-
     @Test
     public void calculateTestWithDifferentValueInArray() {
         FindMaxSubSequenceLength findMaxSubSequenceLength = new FindMaxSubSequenceLength();
-        int[] arr = new int[] {1,2,3,4};
+        int[] arr = new int[]{1, 2, 3, 4};
         findMaxSubSequenceLength.numSequence = arr;
-        assertEquals(4,findMaxSubSequenceLength.calculate());
+        assertEquals(4, findMaxSubSequenceLength.calculate());
     }
 
     @Test
     public void calculateTestWithSameValueInArray() {
         FindMaxSubSequenceLength findMaxSubSequenceLength = new FindMaxSubSequenceLength();
-        int[] arr = new int[] {1,2,3,4,4};
+        int[] arr = new int[]{1, 2, 3, 4, 4};
         findMaxSubSequenceLength.numSequence = arr;
-        assertEquals(4,findMaxSubSequenceLength.calculate());
+        assertEquals(4, findMaxSubSequenceLength.calculate());
     }
 
 }

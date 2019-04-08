@@ -2,6 +2,7 @@ package com.academy.softserve.hanuliak;
 
 import com.academy.softserve.hanuliak.WaysToTileTheFloor;
 import org.junit.*;
+
 import static org.junit.Assert.*;
 
 /**
@@ -14,7 +15,7 @@ public class TestWaysToTileTheFloor {
         int n = 7;
         int m = 7;
         WaysToTileTheFloor waysToTileTheFloor = new WaysToTileTheFloor();
-        assertEquals(2,waysToTileTheFloor.calculate(n,m));
+        assertEquals(2, waysToTileTheFloor.calculate(n, m));
     }
 
     @Test
@@ -22,7 +23,7 @@ public class TestWaysToTileTheFloor {
         int n = 6;
         int m = 7;
         WaysToTileTheFloor waysToTileTheFloor = new WaysToTileTheFloor();
-        assertEquals(1,waysToTileTheFloor.calculate(n,m));
+        assertEquals(1, waysToTileTheFloor.calculate(n, m));
     }
 
     @Test
@@ -30,7 +31,7 @@ public class TestWaysToTileTheFloor {
         int n = 8;
         int m = 7;
         WaysToTileTheFloor waysToTileTheFloor = new WaysToTileTheFloor();
-        assertEquals(3,waysToTileTheFloor.calculate(n,m));
+        assertEquals(3, waysToTileTheFloor.calculate(n, m));
     }
 
 

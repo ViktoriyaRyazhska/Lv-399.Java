@@ -1,4 +1,4 @@
-package java.com.academy.softserve.chenchak;
+package com.academy.softserve.chenchak;
 
 import com.academy.softserve.chenchak.FriendPairs;
 import org.junit.BeforeClass;
