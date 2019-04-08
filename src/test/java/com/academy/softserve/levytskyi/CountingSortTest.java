@@ -33,21 +33,16 @@ public class CountingSortTest {
         assertArrayEquals(array, template);
     }
 
-/*    @Test
+    @Test
     public void testSetNumSequence() throws InvocationTargetException, IllegalAccessException {
         String arrayInString = "1 8 -3 2 6 8 3";
         int[] template = {1, 8, -3, 2, 6, 8, 3};
         CountingSort countingSort = new CountingSort();
 
-
-
-        int [] array = setNumSequence.invoke(countingSort,arrayInString);
+        int [] array = (int[]) setNumSequence.invoke(countingSort,arrayInString);
 
         assertArrayEquals(array,template);
-
-
-        //Зробити, щоб повертало масив
-    }*/
+    }
 
     @Test(expected = Exception.class)
     public void testSetNumSequenceException() throws InvocationTargetException, IllegalAccessException {
