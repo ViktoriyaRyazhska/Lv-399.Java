@@ -1,6 +1,6 @@
+
 package com.academy.softserve.moskalyuk;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
