@@ -63,8 +63,7 @@ public class SumUpNumbersToArray implements Algorithm {
      */
     @Override
     public String toString() {
-        return "This is sum up numbers in array task"
-                + "\nFirst - you have to enter an array, then - one number";
+        return "SumUpNumbersToArray";
     }
 
     /**
