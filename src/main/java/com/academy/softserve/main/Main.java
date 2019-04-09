@@ -78,6 +78,7 @@ public final class Main {
         TASKS.add(new PaintFence());
         TASKS.add(new SumUpNumbersToArray());
 
+
         boolean isRunning = true;
         int chose = TASKS.size();
 

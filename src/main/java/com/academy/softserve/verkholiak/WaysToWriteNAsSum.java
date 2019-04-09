@@ -60,6 +60,6 @@ public class WaysToWriteNAsSum implements Algorithm {
      */
     @Override
     public String toString() {
-        return "Ways to write n as sum of two or more positive integers";
+        return "WaysToWriteNAsSum";
     }
 }

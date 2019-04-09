@@ -107,7 +107,7 @@ public class OptimizedPaintingFence implements Algorithm {
      */
     @Override
     public String toString() {
-        return "Optimized painting fence: use one variable instead of a table";
+        return "Optimized painting fence";
     }
 }
 
