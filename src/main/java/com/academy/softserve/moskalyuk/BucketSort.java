@@ -96,4 +96,9 @@ public class BucketSort implements Algorithm {
         Arrays.stream(integers).forEach(value -> System.out.print(value + " "));
         System.out.println();
     }
+
+    @Override
+    public String toString() {
+        return "BucketSort";
+    }
 }

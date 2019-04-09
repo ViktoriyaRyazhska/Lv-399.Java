@@ -7,9 +7,14 @@ import com.academy.softserve.hanuliak.FindMaxSubSequenceLength;
 import com.academy.softserve.hanuliak.WaysToTileTheFloor;
 import com.academy.softserve.levytskyi.CountingSort;
 import com.academy.softserve.levytskyi.PathsWithoutCrossing;
+import com.academy.softserve.moskalyuk.BucketSort;
+import com.academy.softserve.moskalyuk.ModificationFibonacci;
+import com.academy.softserve.moskalyuk.PalindromicSubSequence;
 import com.academy.softserve.narepeha.Fibonacci;
 import com.academy.softserve.narepeha.LowAndHighEffort;
 import com.academy.softserve.narepeha.QuickSort;
+import com.academy.softserve.nastyastr.PaintFence;
+import com.academy.softserve.nastyastr.SumUpNumbersToArray;
 import com.academy.softserve.silich.InsertionSorting;
 import com.academy.softserve.silich.WaysToCover;
 import com.academy.softserve.verkholiak.OptimizedPaintingFence;
@@ -67,6 +72,11 @@ public final class Main {
         TASKS.add(new MergeSort());
         TASKS.add(new OptimizedPaintingFence());
         TASKS.add(new WaysToWriteNAsSum());
+        TASKS.add(new BucketSort());
+        TASKS.add(new ModificationFibonacci());
+        TASKS.add(new PalindromicSubSequence());
+        TASKS.add(new PaintFence());
+        TASKS.add(new SumUpNumbersToArray());
 
         boolean isRunning = true;
         int chose = TASKS.size();

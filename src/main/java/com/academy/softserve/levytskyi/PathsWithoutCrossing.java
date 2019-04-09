@@ -1,3 +1,4 @@
+
 package com.academy.softserve.levytskyi;
 
 import com.academy.softserve.main.Algorithm;
