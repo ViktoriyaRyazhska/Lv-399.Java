@@ -65,6 +65,11 @@ public class ModificationFibonacci implements Algorithm {
         }
     }
 
+    @Override
+    public String toString() {
+        return "ModificationFibonacci";
+    }
+
     /**
      * Method return index of required element.
      *

@@ -39,6 +39,11 @@ public class PalindromicSubSequence implements Algorithm {
         }
     }
 
+    @Override
+    public String toString() {
+        return "PalindromicSubSequence";
+    }
+
     /**
      * Method return size of palindrome subsequence.
      *
@@ -59,5 +64,6 @@ public class PalindromicSubSequence implements Algorithm {
             }
         }
         return dp[0][size - 1];
+
     }
 }
